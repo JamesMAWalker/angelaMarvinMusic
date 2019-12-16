@@ -1,0 +1,31 @@
+/*
+Theme Name: Template-Theme
+Author: James Walker
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Template for creating custom WP themes. 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// * SASS Imports //
+
+// 1 - Utilities
+@import "1-utilities/media-queries";
+@import "1-utilities/mixins";
+@import "1-utilities/variables";
+
+// 2- Components
+@import "2-components/hero";
+@import "2-components/footer";
+@import "2-components/menu";
+@import "2-components/navigation";
+@import "2-components/visit";
+@import "2-components/welcome";
+
+// 3 - Base
+@import "3-base/base";
+@import "3-base/btn";
+@import "3-base/resets";
+@import "3-base/typography";
