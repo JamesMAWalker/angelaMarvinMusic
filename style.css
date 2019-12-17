@@ -8,7 +8,85 @@ Description: Template for creating custom WP themes.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+/* ------------------------------------- */
+/*	3. Breakpoints/Media Queries
+/* ------------------------------------- */
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+/* ------------------------------------- */
+/*	3. Colors/Textures
+/* ------------------------------------- */
+:root {
+  --color-primary: rgb(73, 219, 192);
+  --color-primary-tr: rgba(73, 219, 192, .85);
+  --color-primary-light: rgb(92, 251, 222);
+  --color-primary-lighter: rgb(0, 255, 208);
+  --color-primary-dark: #005470;
+  --color-primary-transparent: rgb(0, 126, 167, .4);
+  --color-primary-light-transparent: rgb(0, 168, 224, .4);
+  --color-primary-dark-transparent: rgb(0, 84, 112, .4);
+  --color-white: rgb(250, 250, 250);
+  --color-white-tr: rgba(250, 250, 250, .8);
+  --color-white-tr-2: rgba(250, 250, 250, .6);
+  --color-black: rgb(0,0,0);
+  --color-black-tr-1: rgba(0,0,0,.3);
+  --color-black-tr-2: rgba(0,0,0,.8);
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --text-shadow: 1px 5px 5px rgba(0,0,0, .5);
+  --line: 1px solid var(--color-grey-light-3); }
+
+/* ------------------------------------- */
+/*	3. Base/Resets
+/* ------------------------------------- */
 html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
   padding: 0;
   margin: 0;
+  user-select: none;
+  scroll-behavior: smooth;
   background-color: skyblue; }
+
+body {
+  box-sizing: border-box;
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: -0.015em;
+  text-align: left;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+figure {
+  margin: 0; }
+
+h2 {
+  margin: 0; }
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Nunito", sans-serif; } }
+
+a {
+  text-decoration: none; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  word-wrap: break-word; }
+
+#site-content {
+  overflow: hidden; }

@@ -1,0 +1,40 @@
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+
+@mixin bgimggrad($clr1, $clr2, $img) {
+    background-image: linear-gradient(
+    to bottom,
+        $clr1,
+        $clr2),
+    url($img);
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin bgimg($img) {
+    background-image: url($img);
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin smallLine($content, $color, $width) {
+    bottom: -25%;
+    height: 2px;
+    width: $width;
+    background-color: $color;
+}
