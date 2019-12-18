@@ -2,16 +2,13 @@
 get_header();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <?php //wp_head(); ?> -->
-    <title>Document</title>
-</head>
-<body>
-    <h1 class='testQuote'>This is the beginning</h1>
+    <section class="section-hero">
+        <div class="hero hero-bg-container">
+            <div class="hero__container">
+                <h1 class="hero__title header-1">Angela Marvin</h1>
+                <div class="hero__subtitle sub-header-1">cellist | musician | educator</div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -4,14 +4,14 @@
 
 html {
 	font-size: 62.5%; /* 1rem = 10px */
+	font: $font-primary;
     padding: 0;
-    margin: 0;
+	margin: 0;
+	margin-inline: 0 !important;
+	margin-block: 0 !important;
 	user-select: none;
     scroll-behavior: smooth;
-    background-color: skyblue;
 }
-
-
 
 body {
 	box-sizing: border-box;
@@ -29,16 +29,17 @@ figure {
 	margin: 0;
 }
 
-h2 {
+h1 {
 	margin: 0;
 }
 
-@supports ( font-variation-settings: normal ) {
 
-	body {
-        font-family: $font-primary;
-    }    
-}
+// @supports ( font-variation-settings: normal ) {
+
+// 	body {
+//         font-family: $font-primary;
+//     }    
+// }
 
 a {
 	text-decoration: none;
@@ -47,7 +48,7 @@ a {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	word-break: break-word;
 	word-wrap: break-word;
