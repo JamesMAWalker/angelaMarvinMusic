@@ -2,12 +2,12 @@
 
 // Change all instances of 'starter' to the name of the current theme/project.
 
-function starter_files() {
-    wp_enqueue_style('starter_main_files', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
-    wp_enqueue_script('starter_js', get_template_directory_uri() . '/assets/js/index.js', '1.0.0', true);
+function angelamusic_files() {
+    wp_enqueue_style('angelamusic_main_files', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
+    wp_enqueue_script('angelamusic_js', get_template_directory_uri() . '/assets/js/index.js', '1.0.0', true);
 }
 
-add_action('wp_enqueue_scripts', 'starter_files');
+add_action('wp_enqueue_scripts', 'angelamusic_files');
 
 // Remove 32px margin
 function my_function_admin_bar() { return false; }
