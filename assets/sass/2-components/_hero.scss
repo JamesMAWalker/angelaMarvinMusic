@@ -12,11 +12,7 @@
 }
 
 .hero {
-    width: 97%;
-    height: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexFramer
     // background-image: url('assets/images/landing-photo.png');
     @include bgimggrad(
         var(--color-black-tr-1),
