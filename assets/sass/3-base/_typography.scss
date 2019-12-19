@@ -10,10 +10,32 @@
     letter-spacing: .05rem;
 }
 
+.header-2 {
+    font-family: $font-primary;
+    font-weight: 100;
+    font-size: 7rem;
+    color: var(--color-grey-dark-3);
+    letter-spacing: .05rem;
+}
+
 .sub-header-1 {
     font-size: 2.5rem;
     letter-spacing: .5rem;
     font-weight: 200;
     color: var(--color-white-tr-2);
+}
 
+.sub-header-1-dark {
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-grey-dark-3);
+}
+
+.sub-header-2 {
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    font-weight: 200;
+    color: var(--color-grey-dark-3);
 }

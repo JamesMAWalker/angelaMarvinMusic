@@ -18,6 +18,14 @@
     background-size: cover;
 }
 
+@mixin flexFramer {
+    width: 97%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flexCenter {
     display: flex;
     justify-content: center;

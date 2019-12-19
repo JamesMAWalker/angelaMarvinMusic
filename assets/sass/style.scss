@@ -17,12 +17,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "1-utilities/variables";
 
 // 2- Components
+@import "2-components/blog";
+@import "2-components/contact";
 @import "2-components/hero";
 @import "2-components/footer";
-@import "2-components/menu";
+@import "2-components/listen";
 @import "2-components/navigation";
-@import "2-components/visit";
-@import "2-components/welcome";
 
 // 3 - Base
 @import "3-base/base";
