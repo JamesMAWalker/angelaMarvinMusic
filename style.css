@@ -86,8 +86,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
   justify-content: space-evenly;
   align-items: center; }
-  .nav__item {
-    letter-spacing: 10.5%; }
 
 /* ------------------------------------- */
 /*	3. Base/Resets
