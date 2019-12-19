@@ -40,7 +40,7 @@ get_header();
                             <span class="blog__item-category">PERFORMANCE |</span>
                             <span class="blog__item-date">11.03.19</span>
                         </div>
-                        <div class="blog__item-title">
+                        <div class="blog__item-title sub-header-1-dark">
                             My First Concerto
                         </div>
                         <div class="blog__item-content">
@@ -55,7 +55,7 @@ get_header();
                             <span class="blog__item-category">Listening |</span>
                             <span class="blog__item-date">11.01.19</span>
                         </div>
-                        <div class="blog__item-title">
+                        <div class="blog__item-title sub-header-1-dark">
                             Dreaming of Du Pre
                         </div>
                         <div class="blog__item-content">
@@ -70,7 +70,7 @@ get_header();
                             <span class="blog__item-category">THEORY |</span>
                             <span class="blog__item-date">10.21.19</span>
                         </div>
-                        <div class="blog__item-title">
+                        <div class="blog__item-title sub-header-1-dark">
                             Piano for Cellists
                         </div>
                         <div class="blog__item-content">
@@ -85,7 +85,7 @@ get_header();
                             <span class="blog__item-category">PRACTICE |</span>
                             <span class="blog__item-date">10.05.19</span>
                         </div>
-                        <div class="blog__item-title ">
+                        <div class="blog__item-title sub-header-1-dark ">
                             I Learned BASS
                         </div>
                         <div class="blog__item-content">
@@ -100,7 +100,7 @@ get_header();
                             <span class="blog__item-category">PRACTICE |</span>
                             <span class="blog__item-date">09.29.19</span>
                         </div>
-                        <div class="blog__item-title">
+                        <div class="blog__item-title sub-header-1-dark">
                             Dreaming Small
                         </div>
                         <div class="blog__item-content">
