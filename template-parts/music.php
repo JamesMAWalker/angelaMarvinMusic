@@ -1,5 +1,5 @@
 <section class="section-listen">
-    <div class="listen" style="display:block;">
+    <div class="listen">
         <?php 
         $homepageMusic = new WP_Query(array(
             'posts_per_page' => '5',
@@ -20,18 +20,21 @@
                 <li><?php the_title();?></li>
                 <?php
                 if (get_field('video_link')) { ?>
-                    <p><?php the_field('video_link'); ?></p>
+                    <iframe src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
                 <?php } else { 
-                    
-                    if (has_post_thumbnail) {
-                        the_post_thumbnail();
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail( 'medium' );
                     } else {
-                        echo wp_get_upload_dir() . "/default.jpg";
+                        echo '<img style="max-height:50vh;max-width:50vw;" src="' . get_bloginfo( 'stylesheet_directory' ) 
+                        . '/assets/images/default.jpg" />';
                     }
                     ?>
-                
-                    <p>sound file goes here</p>
-
+                <audio controls controlsList="nodownload">
+                    <source src="<?php the_field('audio_file'); ?>" type="audio/ogg">
+                    <source src="<?php the_field('audio_file'); ?>" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
                 <?php }
                 the_content(); ?>
             </div> 
