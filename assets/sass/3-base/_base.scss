@@ -10,7 +10,19 @@ html {
 	margin-inline: 0 !important;
 	margin-block: 0 !important;
 	user-select: none;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+
+	&::selection {
+		color: var(--color-primary);
+	}
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 body {
@@ -52,6 +64,10 @@ a {
 	-webkit-font-smoothing: antialiased;
 	word-break: break-word;
 	word-wrap: break-word;
+}
+
+*:focus {
+	outline: none;
 }
 
 #site-content {

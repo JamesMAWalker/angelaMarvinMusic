@@ -18,7 +18,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*	3. Colors/Textures
 /* ------------------------------------- */
 :root {
-  --color-primary: rgb(73, 219, 192);
+  --test: rgb(111, 255, 86);
+  --test-border: rgb(200, 47, 167);
+  --test-2: rgb(216, 57, 28);
+  --test-border-2: rgb(18, 0, 182);
+  --color-primary: rgb(255, 152, 177);
   --color-primary-tr: rgba(73, 219, 192, .85);
   --color-primary-light: rgb(92, 251, 222);
   --color-primary-lighter: rgb(0, 255, 208);
@@ -86,53 +90,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 100%;
   height: 120vh;
   display: grid;
-  grid-template-columns: 1fr .2fr 1fr;
-  grid-template-rows: repeat(20, 1fr); }
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(20, 1fr);
+  overflow-x: hidden; }
   .blog__title {
     position: absolute;
     bottom: 40%;
     right: 1.5%;
     transform: rotate(90deg); }
-  .blog__spine {
-    grid-column: 2 / 3;
-    grid-row: 1 / span all;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    width: 100%; }
-    .blog__spine::after {
-      content: "";
-      height: 90vh;
-      width: 3px;
-      background-color: var(--color-grey-dark-2-tr);
-      transform: translateY(10%); }
-    .blog__spine-1 {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2; }
-      .blog__spine-1::after {
-        position: absolute;
-        content: url("assets/images/center-dot_line-left.svg");
-        bottom: 0;
-        right: 50%; }
-    .blog__spine-2 {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4; }
-    .blog__spine-3 {
-      grid-column: 2 / 3;
-      grid-row: 7 / 8; }
-    .blog__spine-4 {
-      grid-column: 2 / 3;
-      grid-row: 8 / 9; }
-    .blog__spine-5 {
-      grid-column: 2 / 3;
-      grid-row: 12 / 13; }
-    .blog__spine-6 {
-      grid-column: 2 / 3;
-      grid-row: 14 / 15; }
   .blog__item {
-    border: 1px solid var(--color-grey-dark-3);
+    position: relative;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -141,46 +108,74 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    color: var(--color-grey-dark-3); }
+    color: var(--color-grey-dark-3);
+    cursor: pointer;
+    transition: all .4s; }
+    .blog__item:focus {
+      z-index: 99;
+      grid-row: 1 / span all;
+      grid-column: 1 / span all;
+      background-color: var(--color-white);
+      text-align: left;
+      height: 100%;
+      width: 95%;
+      align-self: center;
+      justify-self: center;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      border: 1px solid var(--color-primary); }
     .blog__item-1, .blog__item-3, .blog__item-5 {
       text-align: right;
       align-items: flex-end;
       padding: 7%;
-      position: relative; }
-      .blog__item-1 .blog__item-details::after, .blog__item-3 .blog__item-details::after, .blog__item-5 .blog__item-details::after {
-        content: url("assets/images/circle-left_line-right.svg");
+      position: relative;
+      transform: translateX(-1rem);
+      border-right: 1px solid var(--color-primary); }
+      .blog__item-1::after, .blog__item-3::after, .blog__item-5::after {
         position: absolute;
-        right: -4rem;
-        top: 1.75rem;
-        transform: scale(0.75); }
+        height: 100%;
+        width: 2px;
+        right: 0;
+        top: 0;
+        color: var(--color-primary); }
     .blog__item-2, .blog__item-4, .blog__item-6 {
       text-align: left;
       align-items: flex-start;
-      padding: 7%; }
+      padding: 7%;
+      position: relative;
+      transform: translateX(2rem);
+      border-left: 1px solid var(--color-grey-dark-3); }
     .blog__item-details {
-      display: flex; }
+      display: flex;
+      font-size: 1vw !important; }
     .blog__item-date {
       font-weight: 600; }
+    .blog__item-title {
+      font-size: 1.5vw !important; }
+    .blog__item-content {
+      font-size: .95vw !important; }
+    .blog__item-link {
+      height: 2vw; }
     .blog__item-1 {
       grid-column: 1 / 2;
       grid-row: 1 / 6; }
     .blog__item-2 {
-      grid-column: 3 / 4;
+      grid-column: 2 / 3;
       grid-row: 3 / 7; }
     .blog__item-3 {
       grid-column: 1 / 2;
       grid-row: 7 / 11; }
     .blog__item-4 {
-      grid-column: 3 / 4;
+      grid-column: 2 / 3;
       grid-row: 8 / 13; }
     .blog__item-5 {
       grid-column: 1 / 2;
       grid-row: 12 / 18; }
     .blog__item-6 {
-      grid-column: 3 / 4;
+      grid-column: 2 / 3;
       grid-row: 14 / 19; }
     .blog__item-7 {
-      grid-column: 3 / 4;
+      grid-column: 2 / 3;
       grid-row: 20 / 21;
       display: flex;
       justify-content: center;
@@ -279,7 +274,16 @@ html {
   margin-inline: 0 !important;
   margin-block: 0 !important;
   user-select: none;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+  html::selection {
+    color: var(--color-primary); }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
 
 body {
   box-sizing: border-box;
@@ -306,6 +310,9 @@ a {
   -webkit-font-smoothing: antialiased;
   word-break: break-word;
   word-wrap: break-word; }
+
+*:focus {
+  outline: none; }
 
 #site-content {
   overflow: hidden; }

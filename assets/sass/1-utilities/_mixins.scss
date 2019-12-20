@@ -2,6 +2,16 @@
 /* Mixins */
 /*--------------------------------*/
 
+@mixin contrastEl {
+    background-color: var(--test);
+    border: 1px solid var(--test-border);
+}
+
+@mixin contrastEl2 {
+    background-color: var(--test-2);
+    border: 1px solid var(--test-border-2);
+}
+
 @mixin bgimggrad($clr1, $clr2, $img) {
     background-image: linear-gradient(
     to bottom,
