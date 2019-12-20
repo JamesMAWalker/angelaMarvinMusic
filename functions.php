@@ -1,7 +1,5 @@
 <?php
 
-// Change all instances of 'starter' to the name of the current theme/project.
-
 function angelamusic_files() {
     wp_enqueue_style('angelamusic_main_files', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
     wp_enqueue_script('angelamusic_js', get_template_directory_uri() . '/assets/js/index.js', '1.0.0', true);
@@ -22,4 +20,10 @@ function eq_add_favicon(){ ?>
 
 add_action('wp_head','eq_add_favicon');
 
+function site_features() {
+    add_theme_support( 'post-thumbnails', array('music') );
+    add_theme_support( 'custom-background' );
+}
+
+add_action('after_setup_theme', 'site_features');
 ?>

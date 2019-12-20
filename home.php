@@ -10,10 +10,11 @@ get_header();
             </div>
         </div>
     </section>
-    <secition class="section-listen">
-        <div class="listen">
-           // Custom listen post type goes here //
-        </div>
+    <section class="section-listen">
+    test
+    <?php 
+        get_template_part('template-parts/music'); 
+    ?>
     </secition>
     <section class="section-blog">
         <div class="blog-frame">
