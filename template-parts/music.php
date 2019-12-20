@@ -1,4 +1,4 @@
-
+<section class="section-listen">
         <div class="listen" style="display:block;">
            <?php 
             $homepageMusic = new WP_Query(array(
@@ -37,3 +37,4 @@
                 </div> 
                 <?php } ?>
         </div>
+</section>
