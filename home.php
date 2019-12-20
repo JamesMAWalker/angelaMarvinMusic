@@ -10,12 +10,7 @@ get_header();
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-    <section class="section-listen">
-    <?php 
-=======
     <?php
->>>>>>> 867291148803b81a116acbca6e9e8c5e26689b2e
         get_template_part('template-parts/music'); 
         get_template_part('template-parts/blog');
 
