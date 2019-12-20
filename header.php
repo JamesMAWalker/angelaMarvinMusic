@@ -24,12 +24,12 @@
 
 </head>	
 <body>
-	<nav class="nav">
-		<div class="nav__item sub-header-1">music</div>
-		<div class="nav__item sub-header-1">blog</div>
+	<nav class="nav" data-scroll>
+		<div class="nav__item " data-scroll>music</div>
+		<div class="nav__item " data-scroll>blog</div>
 		<img class="nav__logo" src="<?php echo get_template_directory_uri()?>/assets/images/provisional-logo.svg" alt="angela marvin monogram">
-		<div class="nav__item sub-header-1">about</div>
-		<div class="nav__item sub-header-1">contact</div>
+		<div class="nav__item " data-scroll>about</div>
+		<div class="nav__item " data-scroll>contact</div>
 	</nav>
 	
 
