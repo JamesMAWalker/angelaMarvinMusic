@@ -19,7 +19,14 @@ get_header();
         <div class="blog-frame">
             <div class="blog-wrapper">
                 <div class="blog">
-                    <div class="blog__spine"></div>
+                    <div class="blog__spine">
+                        <span class="blog__spine-1"></span>
+                        <span class="blog__spine-2"></span>
+                        <span class="blog__spine-3"></span>
+                        <span class="blog__spine-4"></span>
+                        <span class="blog__spine-5"></span>
+                        <span class="blog__spine-6"></span>
+                    </div>
                     <div class="blog__item blog__item-1">
                         <div class="blog__item-details sub-header-2 sub-header-2">
                             <span class="blog__item-category">PRACTICE |</span>
