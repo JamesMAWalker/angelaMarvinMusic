@@ -11,7 +11,6 @@ get_header();
         </div>
     </section>
     <section class="section-listen">
-    test
     <?php 
         get_template_part('template-parts/music'); 
     ?>

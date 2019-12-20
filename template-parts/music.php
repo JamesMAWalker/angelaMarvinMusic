@@ -26,7 +26,7 @@
                         if (has_post_thumbnail) {
                             the_post_thumbnail();
                         } else {
-                            
+                            echo wp_get_upload_dir() . "default.jpg";
                         }
                         ?>
                     
