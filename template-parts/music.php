@@ -1,8 +1,4 @@
-Angela Marvin Music
 
-Listen Section 
-
-+Set styling on checked items, as well as expanded view.
 
 <section class="section-listen">
         <div class="listen-container">
@@ -56,27 +52,37 @@ Listen Section
                     </div>
                 </label> 
 
-                <div style="border: 1px red solid;" class="listen__exp listen__exp-<?php echo $count; $count++?>" tabindex="1">
-                <li><?php the_title();?></li>
+            <div class="listen__exp listen__exp-<?php echo $count; $count++?>" tabindex="1">
+                
                 <?php
                 if (get_field('video_link')) { ?>
-                    <iframe src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <div class="listen__exp-video-wrap">
+                        <span class="listen__exp-video-cover" tabindex="3">
+                            <span class="listen__exp-video-cover-button"></span>
+                        </span>
+                        <iframe class="listen__exp-video" src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
                 <?php } else { 
                     if (has_post_thumbnail()) {
                         the_post_thumbnail( 'medium' );
                     } else {
-                        echo '<img style="max-height:50vh;max-width:50vw;" src="' . get_bloginfo( 'stylesheet_directory' ) 
+                        echo '<img class="listen__exp-photo" style="max-height:50vh;max-width:50vw;" src="' . get_bloginfo( 'stylesheet_directory' ) 
                         . '/assets/images/default.jpg" />';
                     }
                     ?>
-                <audio controls controlsList="nodownload">
+                <div class="listen__exp-controls">
+                    <audio controls controlsList="nodownload">
                     <source src="<?php the_field('audio_file'); ?>" type="audio/ogg">
                     <source src="<?php the_field('audio_file'); ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <?php }
-                the_content(); ?>
+                </div>
+                <?php } ?>
+                <div class="listen__exp-details">
+                    <h4 class="sub-header-2"><?php the_title();?></h4>
+                    <p class="text-1"><?php the_content(); ?></p>
+                </div>
             </div> 
             <?php } ?>
            </div>

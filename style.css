@@ -289,24 +289,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 2%;
+  gap: 4%;
   font-size: 1vh;
   word-wrap: break-word; }
   .listen__button {
     visibility: hidden; }
     .listen__button:checked + .listen__item {
+      position: relative;
       border: 1px solid var(--color-primary);
       box-shadow: var(--shadow-def-primary-col);
       transform: scale(1.015);
       border-right: 3px solid var(--color-primary);
       border-left: 3px solid var(--color-primary); }
+      .listen__button:checked + .listen__item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 2px;
+        width: 30rem;
+        transform: translateX(100%);
+        background-color: var(--color-primary); }
     .listen__button:checked + .listen__item + .listen__exp {
-      background-color: var(--test-2);
-      border: 1px solid var(--test-border-2);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      align-items: left; }
     .listen__button:checked + .listen__item .play-button--active {
       display: flex; }
     .listen__button:checked + .listen__item .play-button {
@@ -368,11 +377,80 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   .listen__exp {
     grid-row: 1 / span all;
     grid-column: 2 / 3;
-    height: 85%;
+    height: 100%;
     align-self: center;
     position: relative;
     z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
     cursor: pointer; }
+    .listen__exp-video-wrap {
+      position: relative;
+      height: 50%;
+      width: 85%;
+      border-radius: 4px; }
+    .listen__exp-video-cover {
+      background-image: url("assets/images/landing-photo.png");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      height: 100%;
+      width: 100%;
+      border-radius: 4px; }
+      .listen__exp-video-cover:focus {
+        z-index: -1; }
+      .listen__exp-video-cover-button {
+        background-image: url("assets/images/play-button-pink-tr.svg");
+        background-position: center;
+        background-size: cover;
+        height: 25%;
+        width: 25%;
+        background-size: contain;
+        background-repeat: no-repeat; }
+    .listen__exp-video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-style: none;
+      border-radius: 4px;
+      border: 1px solid var(--color-primary); }
+    .listen__exp-photo {
+      height: 45%;
+      width: 85%;
+      object-fit: cover;
+      object-position: center;
+      padding: 1vw;
+      border-radius: 4px; }
+    .listen__exp-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2%;
+      height: 10%;
+      width: 75%;
+      border-radius: 100px;
+      box-shadow: var(--shadow-def-primary-col); }
+    .listen__exp-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-items: start;
+      width: 85%;
+      height: 30%;
+      margin: 5%;
+      border-radius: 10px; }
     .listen__exp-1 {
       display: none; }
     .listen__exp-2 {
@@ -387,7 +465,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ------------------------------------- */
 .nav {
   position: absolute;
-  z-index: 2;
+  z-index: 999;
   top: 2%;
   left: 0;
   width: 100%;
@@ -403,7 +481,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 2.5rem;
     letter-spacing: .5rem;
     font-weight: 200;
-    cursor: pointer !important; }
+    cursor: pointer !important;
+    transition: all .2s; }
+    .nav__item:hover {
+      color: var(--color-primary);
+      border-bottom: 1px solid var(--color-primary); }
 
 [data-scroll] {
   transform-origin: top;
@@ -509,3 +591,10 @@ a {
   letter-spacing: .15rem;
   font-weight: 200;
   color: var(--color-grey-dark-3); }
+
+.text-1 {
+  font-size: 1rem;
+  color: var(--color-grey-dark-3); }
+  .text-1 ~ p {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
