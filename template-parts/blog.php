@@ -2,7 +2,7 @@
         <div class="blog-frame">
             <div class="blog-wrapper">
                 <div class="blog">
-                    <div class="blog__item blog__item-1" tabindex="1">
+                    <div class="blog__item blog__item-1" tabindex="2">
                         <div class="blog__item-details sub-header-2 sub-header-2">
                             <span class="blog__item-category">PRACTICE |</span>
                             <span class="blog__item-date">12.12.19</span>
@@ -17,7 +17,7 @@
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
-                    <div class="blog__item blog__item-2" tabindex="1">
+                    <div class="blog__item blog__item-2" tabindex="2">
                         <div class="blog__item-details sub-header-2">
                             <span class="blog__item-category">PERFORMANCE |</span>
                             <span class="blog__item-date">11.03.19</span>
@@ -32,7 +32,7 @@
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
-                    <div class="blog__item blog__item-3" tabindex="1">
+                    <div class="blog__item blog__item-3" tabindex="2">
                         <div class="blog__item-details sub-header-2">
                             <span class="blog__item-category">Listening |</span>
                             <span class="blog__item-date">11.01.19</span>
@@ -47,7 +47,7 @@
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
-                    <div class="blog__item blog__item-4" tabindex="1">
+                    <div class="blog__item blog__item-4" tabindex="2">
                         <div class="blog__item-details sub-header-2">
                             <span class="blog__item-category">THEORY |</span>
                             <span class="blog__item-date">10.21.19</span>
@@ -62,7 +62,7 @@
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
-                    <div class="blog__item blog__item-5" tabindex="1">
+                    <div class="blog__item blog__item-5" tabindex="2">
                         <div class="blog__item-details sub-header-2">
                             <span class="blog__item-category">PRACTICE |</span>
                             <span class="blog__item-date">10.05.19</span>
@@ -77,7 +77,7 @@
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
-                    <div class="blog__item blog__item-6" tabindex="1">
+                    <div class="blog__item blog__item-6" tabindex="2">
                         <div class="blog__item-details sub-header-2">
                             <span class="blog__item-category">PRACTICE |</span>
                             <span class="blog__item-date">09.29.19</span>

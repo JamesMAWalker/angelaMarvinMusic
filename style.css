@@ -24,6 +24,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --test-border-2: rgb(18, 0, 182);
   --color-primary: rgb(255, 152, 177);
   --color-primary-tr: rgba(255, 152, 177, .35);
+  --color-primary-tr-2: rgba(255, 152, 177, .75);
   --color-primary-light: rgb(92, 251, 222);
   --color-primary-lighter: rgb(0, 255, 208);
   --color-primary-dark: #005470;
@@ -45,6 +46,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --color-grey-dark-2-tr: rgba(58, 58, 58, .6);
   --color-grey-dark-3: rgb(149, 149, 149);
   --color-grey-dark-4: rgb(215, 215, 215);
+  --shadow-def-primary-col: .75rem 1.5rem 1rem var(--color-primary-tr-2);
+  --shadow-def: .5rem 1rem 1.5rem rgba(0,0,0,.3);
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
   --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
   --text-shadow: 1px 5px 5px rgba(0,0,0, .5);
@@ -92,7 +95,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(20, 1fr);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  transform: translateX(-3%); }
   .blog__title {
     position: absolute;
     bottom: 40%;
@@ -181,6 +185,35 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       justify-content: center;
       align-items: center; }
 
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+.play-button {
+  background-image: url("assets/images/play-button.svg");
+  background-position: center;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 65%;
+  width: 20%;
+  transition: all .2s; }
+  .play-button:hover {
+    background-image: url("assets/images/play-button-pink.svg"); }
+  .play-button:active {
+    transform: translateY(1px); }
+
+.play-button--active {
+  display: none;
+  background-image: url("assets/images/play-button-pink.svg");
+  background-position: center;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 65%;
+  width: 20%; }
+  .play-button--active:active {
+    transform: translateY(1px); }
+
 /* ------------------------------------- */
 /*	2. Contact Section 
 /* ------------------------------------- */
@@ -242,13 +275,112 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 100vw;
   background-color: var(--color-white); }
 
-.listen {
+.listen-container {
   width: 97%;
   height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-grey-dark-4); }
+
+.listen {
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2%;
+  font-size: 1vh;
+  word-wrap: break-word; }
+  .listen__button {
+    visibility: hidden; }
+    .listen__button:checked + .listen__item {
+      border: 1px solid var(--color-primary);
+      box-shadow: var(--shadow-def-primary-col);
+      transform: scale(1.015);
+      border-right: 3px solid var(--color-primary);
+      border-left: 3px solid var(--color-primary); }
+    .listen__button:checked + .listen__item + .listen__exp {
+      background-color: var(--test-2);
+      border: 1px solid var(--test-border-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .listen__button:checked + .listen__item .play-button--active {
+      display: flex; }
+    .listen__button:checked + .listen__item .play-button {
+      display: none; }
+    .listen__button-1 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2; }
+    .listen__button-2 {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2; }
+    .listen__button-3 {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2; }
+    .listen__button-4 {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2; }
+  .listen__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+    height: 90%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-grey-dark-3);
+    box-shadow: var(--shadow-def);
+    transition: all .2s; }
+    .listen__item-wrapper {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-items: flex-start;
+      padding: 2%; }
+      .listen__item-wrapper h4 {
+        font-size: 1vw; }
+      .listen__item-wrapper * {
+        font-size: .75vw; }
+    .listen__item-1 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2; }
+    .listen__item-2 {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2; }
+    .listen__item-3 {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2; }
+    .listen__item-4 {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2; }
+  .listen__exp {
+    grid-row: 1 / span all;
+    grid-column: 2 / 3;
+    height: 85%;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+    cursor: pointer; }
+    .listen__exp-1 {
+      display: none; }
+    .listen__exp-2 {
+      display: none; }
+    .listen__exp-3 {
+      display: none; }
+    .listen__exp-4 {
+      display: none; }
 
 /* ------------------------------------- */
 /*	2. Navigation Bar
@@ -281,9 +413,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   position: fixed;
   top: 2%;
   transform: translateY(-20%);
-  background-color: var(--color-primary-tr);
-  color: var(--color-white) !important;
-  text-shadow: var(--text-shadow); }
+  background-color: var(--color-grey-light-1);
+  color: var(--color-grey-dark-3) !important;
+  border-bottom: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-light); }
 
 /* ------------------------------------- */
 /*	3. Base/Resets
@@ -332,7 +465,8 @@ a {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   word-break: break-word;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  margin: 0; }
 
 *:focus {
   outline: none; }

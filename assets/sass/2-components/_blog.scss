@@ -35,6 +35,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(20, 1fr);
     overflow-x: hidden;
+    transform: translateX(-3%);
     
     &__title {
         position: absolute;
@@ -53,6 +54,7 @@
         color: var(--color-grey-dark-3);
         cursor: pointer;
         transition: all .4s;
+        
 
         &:focus {
             z-index: 99;

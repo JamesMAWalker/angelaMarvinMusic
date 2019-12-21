@@ -12,6 +12,7 @@
     // --color-primary: rgb(152, 249, 255);
     --color-primary: rgb(255, 152, 177);
     --color-primary-tr: rgba(255, 152, 177, .35);
+    --color-primary-tr-2: rgba(255, 152, 177, .75);
     // --color-primary-tr: rgba(73, 219, 192, .65);
     --color-primary-light: rgb(92, 251, 222);
     --color-primary-lighter: rgb(0, 255, 208);
@@ -43,6 +44,8 @@
     --color-grey-dark-3: rgb(149, 149, 149);
     --color-grey-dark-4: rgb(215, 215, 215);
 
+    --shadow-def-primary-col: .75rem 1.5rem 1rem var(--color-primary-tr-2);
+    --shadow-def: .5rem 1rem 1.5rem rgba(0,0,0,.3);
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
     --text-shadow: 1px 5px 5px rgba(0,0,0, .5);

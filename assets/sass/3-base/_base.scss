@@ -19,11 +19,11 @@ html {
 }
 
 
-
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
+
 
 body {
 	box-sizing: border-box;
@@ -64,6 +64,7 @@ a {
 	-webkit-font-smoothing: antialiased;
 	word-break: break-word;
 	word-wrap: break-word;
+	margin: 0;
 }
 
 *:focus {

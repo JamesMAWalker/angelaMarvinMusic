@@ -1,0 +1,33 @@
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+
+.play-button {
+    @include bgimg('assets/images/play-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 65%;
+    width: 20%;
+    transition: all .2s;
+
+    &:hover {
+        background-image: url('assets/images/play-button-pink.svg');
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.play-button--active {
+    display: none;
+    @include bgimg('assets/images/play-button-pink.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 65%;
+    width: 20%;
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
