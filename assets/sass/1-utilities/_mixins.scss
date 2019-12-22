@@ -12,6 +12,11 @@
     border: 1px solid var(--test-border-2);
 }
 
+@mixin contrastEl3 {
+    background-color: var(--test-3);
+    border: 1px solid var(--test-border-3);
+}
+
 @mixin bgimggrad($clr1, $clr2, $img) {
     background-image: linear-gradient(
     to bottom,
@@ -26,6 +31,13 @@
     background-image: url($img);
     background-position: center;
     background-size: cover;
+}
+
+@mixin bgimgicon($img) {
+    background-image: url($img);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @mixin flexFramer {

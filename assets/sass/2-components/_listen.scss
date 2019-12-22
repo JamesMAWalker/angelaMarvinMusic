@@ -11,18 +11,26 @@
 
 .listen-container {
     @include flexFramer;
+    position: relative;
     border: 1px solid var(--color-grey-dark-4);
 }
 
 .listen {
-    height: 80%;
-    width: 80%;
+    height: 75%;
+    width: 75%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 4%;
     font-size: 1vh;
     word-wrap: break-word;
+
+    &__title {
+        position: absolute;
+        bottom: 30%;
+        right: -1%;
+        transform: rotate(90deg);
+    }
 
     &__button {
         visibility: hidden;
@@ -196,7 +204,7 @@
             object-fit: cover;
             object-position: center;
             padding: 1vw;
-            border-radius: 4px;
+            border-radius: 12px;
         }
 
         &-controls {

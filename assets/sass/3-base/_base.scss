@@ -71,6 +71,20 @@ a {
 	outline: none;
 }
 
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;       /* Remove default arrow */
+   background-image: url('assets/images/chevron-down.svg');   /* Add custom arrow */
+   background-repeat: no-repeat;
+   background-position: 90% 50%;
+}
+
+button, 
+input, {
+	border: none;
+}
+
 #site-content {
 	overflow: hidden;
 }

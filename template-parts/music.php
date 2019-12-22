@@ -2,6 +2,11 @@
 
 <section class="section-listen">
         <div class="listen-container">
+            <div class="listen__title">
+                <span class="header-2">
+                    listen
+                </span>
+            </div>
            <div class="listen">
             <?php 
             $homepageMusic = new WP_Query(array(
