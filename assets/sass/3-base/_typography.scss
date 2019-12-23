@@ -29,6 +29,14 @@
     letter-spacing: 1rem;
 }
 
+.header-3 {
+    font-family: $font-title;
+    font-weight: 100;
+    font-size: 6rem;
+    color: var(--color-primary);
+    letter-spacing: .5rem;
+}
+
 .sub-header-1 {
     font-size: 2.5rem;
     letter-spacing: .5rem;
@@ -49,6 +57,13 @@
     letter-spacing: .15rem;
     font-weight: 200;
     color: var(--color-grey-dark-3);
+}
+
+.sub-header-2-dark {
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    font-weight: 200;
+    color: var(--color-grey-dark-2);
 }
 
 .text-1 {

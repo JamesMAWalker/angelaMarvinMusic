@@ -72,6 +72,23 @@
         &:checked ~ .contact__form-container {
             transform: translateY(0%);
         }
+
+        &:checked ~ .contact__form-container > .contact__form-perf {
+            transition: all .5;
+             
+            &::before {
+                content: "";
+                position: absolute;
+                // z-index: 99;
+                left: 0;
+                top: 25%;
+                height: 2px;
+                width: 100%;
+                transform: translateX(-100%) scaleX(1);
+                background-color: var(--color-primary);
+                transition: all .5;
+            }
+        }
     }
 
     &__radio-2 {
@@ -79,10 +96,29 @@
         &:checked ~ .contact__form-container {
             transform: translateY(-50%) !important;
         }
+
+        &:checked ~ .contact__form-container > .contact__form-less {
+            transition: all .5;
+             
+            &::before {
+                content: "";
+                position: absolute;
+                // z-index: 99;
+                left: 0;
+                bottom: 25%;
+                height: 2px;
+                width: 100%;
+                transform: translateX(-100%) scaleX(1);
+                background-color: var(--color-primary);
+                transition: all .5;
+            }
+        }
     }
 
     &__btn-perf {
         @include flexCenterCol;
+        position: relative;
+        z-index: 2;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         height: 75%;
@@ -95,6 +131,8 @@
 
     &__btn-less {
         @include flexCenterCol;
+        position: relative;
+        z-index: 2;
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         height: 75%;
@@ -160,6 +198,7 @@
         @include flexCenterCol;
         justify-content: space-evenly;
         position: relative;
+        overflow: visible !important;
         z-index: 0;
         height: 80%;
         width: 70%;
@@ -174,21 +213,22 @@
             // border: 5px solid red;
             grid-row: 1 / 2;
             grid-column: 1 / 2;
-
+            transition: all .5;
             ////// TODO - figure out z-index //////
-            /*
+
             &::before {
                 content: "";
                 position: absolute;
-                z-index: 99;
+                // z-index: 99;
                 left: 0;
                 top: 25%;
                 height: 2px;
-                width: 30rem;
-                transform: translateX(-10rem);
+                width: 100%;
+                transform: translateX(-100%) scaleX(0);
                 background-color: var(--color-primary);
+                transition-delay: .4s;
+                transition: all .75s;
             }
-            */
         }
 
         &-less {
@@ -200,6 +240,20 @@
                 display: flex;
                 justify-content: space-between;
                 width: 75%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                // z-index: 99;
+                left: 0;
+                bottom: 25%;
+                height: 2px;
+                width: 100%;
+                transform: translateX(-100%) scaleX(0);
+                background-color: var(--color-primary);
+                transition-delay: .4s;
+                transition: all .75s;
             }
         }
 
