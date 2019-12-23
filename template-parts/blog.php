@@ -1,4 +1,4 @@
-<section class="section-blog">
+<section class="section-blog" id="section-blog">
         <div class="blog-frame">
             <div class="blog-wrapper">
                 <div class="blog">

@@ -1,4 +1,4 @@
-    <section class="section-hero">
+    <section class="section-hero" id="section-hero">
         <div class="hero hero-bg-container">
             <div class="hero__container">
                 <h1 class="hero__title header-1">Angela Marvin</h1>

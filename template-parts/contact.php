@@ -1,4 +1,4 @@
-<section class="section-contact">
+<section class="section-contact" id="section-contact">
     <div class="contact-frame">
         <div class="contact__cta">
             <span class="header-2">

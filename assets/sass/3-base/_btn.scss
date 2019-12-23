@@ -2,15 +2,29 @@
 /*	3. Buttons
 /* ------------------------------------- */
 
-.btn__submit {
-    padding: 1rem 2.5rem;
-    background-color: var(--color-primary);
-    border-radius: 4px;
-    outline: none;
-    opacity: .9;
+.btn {
+    
+    &__submit {
+        padding: 1rem 2.5rem;
+        background-color: var(--color-primary);
+        border-radius: 4px;
+        outline: none;
+        opacity: .9;
 
-    &:hover {
-        transform: translateY(-1px);
-        opacity: 1;
+        &:hover {
+            transform: translateY(-1px);
+            opacity: 1;
+        }
+    }
+
+    &__up {
+        @include bgimgicon('assets/images/chevron-up-pink.svg');
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.075);
+        }
     }
 }
