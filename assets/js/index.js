@@ -1,4 +1,1 @@
-const header = document.querySelector('.testQuote');
-
-
-
+jQuery('.blog__item-7').$(selector).addClass(className);

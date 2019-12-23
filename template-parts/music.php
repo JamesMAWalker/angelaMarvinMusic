@@ -30,30 +30,8 @@
                     <span class="play-button--active"></span>
                     <span class="play-button"></span>
                     <div class="listen__item-wrapper">
-                        <h4><?php the_title();?></h4>
-                        <?php
-                        if (get_field('video_link')) { ?>
-                            <p>
-                                <?php 
-                                // the_field('video_link'); 
-                                ?>
-                            </p>
-                        <?php } else { 
-                            
-                            // if (has_post_thumbnail) {
-                            //     the_post_thumbnail();
-                            // } else {
-                                
-                            // }
-                            ?>
-                        
-                            <!-- <p>sound file goes here</p> -->
-
-                        <?php } ?>
-                        
+                        <h4><?php the_title();?></h4>                  
                         <p><?php the_field('artists');?></p> 
-                        
-                        
                     </div>
                 </label> 
 
@@ -89,7 +67,7 @@
                     <p class="text-1"><?php the_content(); ?></p>
                 </div>
             </div> 
-            <?php } ?>
+            <?php } wp_reset_postdata(); ?>
            </div>
         </div>
 </section>
