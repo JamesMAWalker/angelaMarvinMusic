@@ -9,7 +9,11 @@
     width: 100%;
 
     &-container {
-        @include bgimg('assets/images/bokeh-meadow.jpg');
+        @include bgimggrad(
+            var(--color-black-tr-1),
+            var(--color-black-tr-1),
+            'assets/images/bokeh-meadow.jpg'
+        );
         height: 95%;
         width: 97%;
         margin-bottom: 1%;
@@ -19,15 +23,77 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    &__social {
+    &__left {
+        position: relative;
         grid-column: 1 / 2;
+        height: 100%;
+        width: 100%;
+        @include flexCenterCol;
+        justify-content: center;
+    }
+
+    &__social {
+
+        &-links {
+            @include flexCenter;
+            width: 100%;
+            justify-content: space-evenly;
+            justify-self: center;
+            align-self: center;
+        }
+
+        &-icon {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        &-built {
+            @include flexCenter;
+            position: absolute;
+            bottom: .5rem;
+            width: 100%;
+            margin: 1% 0;
+            justify-self: center;
+            align-self: center;
+        }
     }
 
     &__center {
+        @include flexCenterCol;
+        @include bggrad(
+            var(--color-white-tr-3),
+            var(--color-white-tr-3)
+        );
         grid-column: 2 / 3;
+        height: 100%;
+        width: 100%;
+
+        &-name {
+            @include flexCenterCol;
+        }
+
+        &-info {
+            @include flexCenterCol;
+            
+            & > * {
+                margin-top: .75rem;
+            }
+        }
+
     }
 
     &__right {
+        @include flexCenter;
         grid-column: 3 / 4;
+        transition: all .2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-primary-tr);
+        }
+
+        &-totop {
+            @include flexCenter;
+        }
     }
 }

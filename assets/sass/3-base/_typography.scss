@@ -12,10 +12,12 @@
 
 .header-1-small {
     font-family: $font-title;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 3rem;
-    color: var(--color-white-tr-2);
+    color: var(--color-white-tr);
     letter-spacing: .5rem;
+    z-index: 99;
+    position: relative;
 }
 
 .header-2 {
@@ -62,14 +64,37 @@
 
 .text-1-light {
     font-size: 2rem;
-    color: var(--color-grey-dark-3);
+    color: var(--color-white);
     letter-spacing: .5rem;
     font-weight: 400;
 }
 
 .text-2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-white);
     letter-spacing: .5rem;
     font-weight: 200;
+}
+
+.text-2-tr {
+    font-size: 1.5rem;
+    color: var(--color-white-tr);
+    letter-spacing: .25rem;
+    font-weight: 200;
+}
+
+.divider-pink {
+    @include bgimg('assets/images/curly-divider-pink.svg');
+    height: 1rem;
+    width: 4rem;
+    object-fit: contain;
+    margin-top: -.25rem;
+}
+
+.cc-logo {
+    font-family: $font-builders;
+    color: var(--color-white-tr);
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+    font-weight: bold;
 }
