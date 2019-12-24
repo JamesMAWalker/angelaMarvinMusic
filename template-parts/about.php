@@ -1,7 +1,7 @@
 <?php 
 
 global $post; 
-
+the_post();
 ?>
 
 <section class="section-about">
@@ -9,14 +9,15 @@ global $post;
         <div class="about">
             <div class="about__content">
                 <div class="about__title">
-                    <!-- get the title goes here -->
-                    <h1 class="header-3">About Angela</h1>
+                    <h1 class="header-3"><?php the_title(); ?></h1>
                     <span class="divider-pink"></span>
                 </div>
-                <p class="about__desc sub-header-2-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde est quisquam placeat sunt fuga. Harum, ea nemo repellendus laboriosam at deserunt officiis maiores sapiente nisi quam, illum pariatur aspernatur assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptates unde facilis impedit sint reiciendis itaque, aperiam expedita sapiente, distinctio, vero mollitia cum quasi recusandae? Officia voluptate possimus explicabo laboriosam.</p>
-                <p class="about__desc sub-header-2-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde est quisquam placeat sunt fuga. Harum, ea nemo repellendus laboriosam at deserunt officiis maiores sapiente nisi quam, illum pariatur aspernatur assumenda? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, odit tempore? Totam nemo, est laudantium, quam amet eius facere repellat, dolores doloremque ea voluptate architecto at aliquid accusamus autem vero! </p>
+                <p class="about__desc sub-header-2-dark"><?php echo get_the_content(); ?></p>
             </div>
-            <div class="about__photo"></div>
+            <div class="about__photo"<?php if(has_post_thumbnail(get_the_ID())) {
+                echo " style='background-image: url(" . '"';
+                echo get_the_post_thumbnail_url(get_the_ID()) . '")!important;' . "'";
+            }?>></div>
         </div>
-    </div>
+        </div>
 </section>

@@ -26,7 +26,7 @@
     &__content {
         @include flexCenterCol;
         position: relative;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
         width: 70%;
@@ -53,6 +53,7 @@
 
     &__content {
         text-align: center;
+        overflow:scroll;
     }
 
     &__photo {
