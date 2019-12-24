@@ -1,1 +1,3 @@
-jQuery('.blog__item-7').$(selector).addClass(className);
+jQuery(document).ready(function($) {
+    $('.blog__item-7').addClass('test');
+  })
