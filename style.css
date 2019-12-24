@@ -28,6 +28,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .hide {
   display: none !important; }
 
+.unhide {
+  display: block !important; }
+
+.unhide--flex-height {
+  display: flex !important;
+  transform: translateY(-5%) !important;
+  transition: all .2s !important; }
+
 /* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
@@ -985,7 +993,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   justify-content: space-evenly;
   align-items: center;
   background-color: transparent;
-  color: var(--color-white-tr-2); }
+  color: var(--color-white-tr-2);
+  transition: all .2s; }
   .nav__logo {
     transform: scale(0.65); }
     @media only screen and (max-width: 68.75em) {
@@ -1029,19 +1038,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       .nav__checkbox:checked ~ .nav__btn-phone::before {
         top: 0;
         width: 3rem;
-        transform: rotate(135deg); }
+        background-color: var(--color-grey-dark-3);
+        transform: rotate(135deg);
+        z-index: 999; }
       .nav__checkbox:checked ~ .nav__btn-phone::after {
         top: 0;
         width: 3rem;
-        transform: rotate(-135deg); }
+        background-color: var(--color-grey-dark-3);
+        transform: rotate(-135deg);
+        z-index: 999; }
   .nav__btn-phone {
     display: none;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 7rem;
     right: 6rem;
     height: 2px;
     width: 4rem;
-    background-color: var(--color-white-tr);
+    background-color: var(--color-primary-tr-2);
     cursor: pointer; }
     @media only screen and (max-width: 43.75em) {
       .nav__btn-phone {
@@ -1050,14 +1064,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       transform: scaleX(0.75); }
     .nav__btn-phone, .nav__btn-phone::before, .nav__btn-phone::after {
       transition: all .2s; }
-      .nav__btn-phone:hover, .nav__btn-phone::before:hover, .nav__btn-phone::after:hover {
-        color: var(--color-white); }
     .nav__btn-phone::before, .nav__btn-phone::after {
       content: "";
       position: absolute;
       width: 3rem;
       height: 2px;
-      background-color: var(--color-white-tr);
+      background-color: var(--color-primary-tr-2);
       display: inline-block;
       outline: none;
       transition: all .2s; }
@@ -1072,8 +1084,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   @media only screen and (max-width: 43.75em) {
     .nav {
       display: none;
+      position: fixed;
       flex-direction: column;
-      height: 60vh;
       background-color: var(--color-white);
       color: var(--color-grey-dark-3);
       font-size: 2rem;
