@@ -40,6 +40,11 @@
                     <?php 
                         $counter++;
                         if($counter === 7 OR $homepageBlog->current_post + 1 == $homepageBlog->post_count) { 
+                            if ($homepageBlog->current_post + 1 == $homepageBlog->post_count) {
+                                for($i=$counter; $i<7; $i++){ ?>
+                                    <div class="blog__item filler__item-<?php echo $i; ?>"></div>
+                                <?php }
+                            }
                         $counter = 1; 
                         if($firstloop === true) {
                             $firstloop = false; ?>
@@ -48,9 +53,12 @@
                             <?php } else { ?>
                             <div class="blog__item blog__item-8 text-button hide">&larr; View newer
                             </div>
-                            <div class="blog__item blog__item-7 text-button hide">View older &rarr;
-                            </div>
-                        <?php }}
+                            <?php if ($homepageBlog->current_post + 1 !== $homepageBlog->post_count) { ?>
+                                <div class="blog__item blog__item-7 text-button hide">View older &rarr;
+                                </div>
+                            <?php }
+                            
+                     }}
                     } ?>
             </div>
             <div class="blog__title">

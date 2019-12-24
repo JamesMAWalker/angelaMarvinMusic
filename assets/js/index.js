@@ -13,14 +13,14 @@ jQuery(document).ready(function($) {
         $(this).prevAll(".blog__item").addClass('hide');
         $(this).addClass('hide');
         $(this).nextAll(".blog__item").slice(0,8).removeClass('hide');
-
     })
     
     //back button
     $('.blog__item-8').on("click", function(){
-        $(this).nextAll(".blog__item").addClass('hide');
+        $(this).prevUntil(".blog__item-7").addClass('hide');
         $(this).addClass('hide');
-        $(this).prevAll(".blog__item").slice(0,8).removeClass('hide');
-
+        $(this).next(".blog__item-7").addClass('hide');
+        $(this).prevAll('div').slice(7,15).removeClass('hide');
+        $(this).prev(".blog__item-7").removeClass('hide');
     })
 });
