@@ -13,8 +13,8 @@
                 $firstloop = true;
                 while ($homepageBlog->have_posts()) { 
                     $homepageBlog->the_post(); ?>
-                    <div class="blog__item blog__item-<?php echo $counter ?>" tabindex="2" <?php if($firstloop===false) { ?>
-                    class="hide" <?php } ?>>
+                    <div class="blog__item blog__item-<?php echo $counter; if($firstloop===false) {
+                    echo " hide"; } ?>" tabindex="2">
                         <div class="blog__item-details sub-header-2 sub-header-2">
                             <span class="blog__item-category"><?php foreach((get_the_category()) as $category) { ?>
                                 <a href="<?php echo get_category_link($category->cat_ID); ?>"><?php echo $category->category_nicename ?> </a>
@@ -39,7 +39,7 @@
                     </div>
                     <?php 
                         $counter++;
-                        if($counter === 7) { 
+                        if($counter === 7 OR $homepageBlog->current_post + 1 == $homepageBlog->post_count) { 
                         $counter = 1; 
                         if($firstloop === true) {
                             $firstloop = false; ?>
@@ -50,10 +50,8 @@
                             </div>
                             <div class="blog__item blog__item-7 text-button hide">View older &rarr;
                             </div>
-                        <?php }
-                        ?>
-
-                        <?php }} ?>
+                        <?php }}
+                    } ?>
             </div>
             <div class="blog__title">
                 <span class="header-2">
@@ -63,6 +61,3 @@
         </div>
     </section>    
     <?php wp_reset_postdata(); ?>
-    <script>
-    jQuery('.blog__item-7').add
-  </script>
