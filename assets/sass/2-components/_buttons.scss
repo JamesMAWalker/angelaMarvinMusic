@@ -11,7 +11,7 @@
     transition: all .2s;
 
     &:hover {
-        background-image: url('assets/images/play-button-pink.svg');
+        background-image: url('assets/images/play-button-blu.svg');
     }
 
     &:active {
@@ -21,7 +21,7 @@
 
 .play-button--active {
     display: none;
-    @include bgimg('assets/images/play-button-pink.svg');
+    @include bgimg('assets/images/play-button-blu.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 65%;
@@ -29,5 +29,37 @@
 
     &:active {
         transform: translateY(1px);
+    }
+}
+
+
+/* ------------------------------------- */
+/*	3. Buttons
+/* ------------------------------------- */
+
+.btn {
+    
+    &__submit {
+        padding: 1rem 2.5rem;
+        background-color: var(--color-primary);
+        border-radius: 4px;
+        outline: none;
+        opacity: .9;
+
+        &:hover {
+            transform: translateY(-1px);
+            opacity: 1;
+        }
+    }
+
+    &__up {
+        @include bgimgicon('assets/images/chevron-up-pink.svg');
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.075);
+        }
     }
 }

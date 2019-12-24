@@ -27,9 +27,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --color-primary: rgb(255, 152, 177);
   --color-primary-tr: rgba(255, 152, 177, .35);
   --color-primary-tr-2: rgba(255, 152, 177, .75);
-  --color-primary-light: rgb(92, 251, 222);
-  --color-primary-lighter: rgb(0, 255, 208);
-  --color-primary-dark: #005470;
   --color-primary-transparent: rgb(0, 126, 167, .4);
   --color-primary-light-transparent: rgb(0, 168, 224, .4);
   --color-primary-dark-transparent: rgb(0, 84, 112, .4);
@@ -272,13 +269,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 20%;
   transition: all .2s; }
   .play-button:hover {
-    background-image: url("assets/images/play-button-pink.svg"); }
+    background-image: url("assets/images/play-button-blu.svg"); }
   .play-button:active {
     transform: translateY(1px); }
 
 .play-button--active {
   display: none;
-  background-image: url("assets/images/play-button-pink.svg");
+  background-image: url("assets/images/play-button-blu.svg");
   background-position: center;
   background-size: cover;
   background-size: contain;
@@ -287,6 +284,30 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 20%; }
   .play-button--active:active {
     transform: translateY(1px); }
+
+/* ------------------------------------- */
+/*	3. Buttons
+/* ------------------------------------- */
+.btn__submit {
+  padding: 1rem 2.5rem;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  outline: none;
+  opacity: .9; }
+  .btn__submit:hover {
+    transform: translateY(-1px);
+    opacity: 1; }
+
+.btn__up {
+  background-image: url("assets/images/chevron-up-pink.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: all .2s; }
+  .btn__up:hover {
+    transform: scale(1.075); }
 
 /* ------------------------------------- */
 /*	2. Contact Section 
@@ -615,6 +636,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     align-items: center;
     grid-column: 3 / 4;
     transition: all .2s;
+    height: 100%;
+    width: 100%;
     cursor: pointer; }
     .footer__right:hover {
       background-color: var(--color-primary-tr); }
@@ -811,7 +834,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       .listen__exp-video-cover:focus {
         z-index: -1; }
       .listen__exp-video-cover-button {
-        background-image: url("assets/images/play-button-pink-tr.svg");
+        background-image: url("assets/images/play-button-blu-tr.svg");
         background-position: center;
         background-size: cover;
         height: 25%;
@@ -980,30 +1003,6 @@ input {
 
 #site-content {
   overflow: hidden; }
-
-/* ------------------------------------- */
-/*	3. Buttons
-/* ------------------------------------- */
-.btn__submit {
-  padding: 1rem 2.5rem;
-  background-color: var(--color-primary);
-  border-radius: 4px;
-  outline: none;
-  opacity: .9; }
-  .btn__submit:hover {
-    transform: translateY(-1px);
-    opacity: 1; }
-
-.btn__up {
-  background-image: url("assets/images/chevron-up-pink.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 2.5rem;
-  width: 2.5rem;
-  transition: all .2s; }
-  .btn__up:hover {
-    transform: scale(1.075); }
 
 /* ------------------------------------- */
 /*	3. Typography

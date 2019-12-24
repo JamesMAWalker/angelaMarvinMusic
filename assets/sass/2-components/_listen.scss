@@ -180,7 +180,7 @@
             }
 
             &-button {
-                @include bgimg('assets/images/play-button-pink-tr.svg');
+                @include bgimg('assets/images/play-button-blu-tr.svg');
                 height: 25%;
                 width: 25%;
                 background-size: contain;
@@ -213,7 +213,6 @@
             height: 10%;
             width: 50%;
             border-radius: 100px;
-           
             box-shadow: var(--shadow-def-primary-col);
         }
 
