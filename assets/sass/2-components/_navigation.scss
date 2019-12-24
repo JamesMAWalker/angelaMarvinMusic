@@ -66,18 +66,76 @@
         height: 0px;
         width: 0px;
         position: absolute;
+
+        &:checked ~ .nav__btn-phone {
+
+            height: 0;
+
+            &::before { 
+                top: 0; 
+                width: 3rem;
+                transform: rotate(135deg);
+            }
+
+            &::after { 
+                top: 0; 
+                width: 3rem;
+                transform: rotate(-135deg);
+            }
+        }
     }
 
     &__btn-phone {
+        display: none;
         position: absolute;
         top: 7rem;
         right: 6rem;
-        height: 1px;
+        height: 2px;
         width: 4rem;
-        background-color: var(--color-white);
+        background-color: var(--color-white-tr);
+        cursor: pointer;
 
-        &::before {
+        @media only screen and (max-width: $bp-sm) {
+            display: block;
+        }
+
+        &:hover {
+            transform: scaleX(.75);
+        }
+
+        &,
+        &::before,
+        &::after {
+            transition: all .2s;
+
+            &:hover {
+                color: var(--color-white);
+            }
+        }
+
+        &::before,
+        &::after {
             content: "";
+            position: absolute;
+            width: 3rem;
+            height: 2px;
+            background-color: var(--color-white-tr);
+            display: inline-block;
+            outline: none;
+            transition: all .2s;
+            
+            &:hover {
+                transform: scaleX(1.1);
+            }
+        }
+
+        &::before { 
+            top: -.8rem; 
+            width: 3rem;
+        }
+        &::after { 
+            top: .8rem; 
+            width: 2.5rem;
         }
     }
 

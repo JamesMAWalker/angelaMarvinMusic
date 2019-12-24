@@ -23,6 +23,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Mixins */
 /*--------------------------------*/
 /* ------------------------------------- */
+/*	2. Utility Classes
+/* ------------------------------------- */
+.hide {
+  display: none; }
+
+/* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
 :root {
@@ -125,7 +131,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     justify-content: center;
     align-items: center; }
   .about__content {
-    text-align: center; }
+    text-align: center;
+    overflow: scroll; }
   .about__photo {
     display: flex;
     justify-content: center;
@@ -271,6 +278,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       grid-row: 14 / 19; }
     .blog__item-7 {
       grid-column: 2 / 3;
+      grid-row: 20 / 21;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .blog__item-8 {
+      grid-column: 1 / 2;
       grid-row: 20 / 21;
       display: flex;
       justify-content: center;
@@ -1011,15 +1024,51 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: 0px;
     width: 0px;
     position: absolute; }
+    .nav__checkbox:checked ~ .nav__btn-phone {
+      height: 0; }
+      .nav__checkbox:checked ~ .nav__btn-phone::before {
+        top: 0;
+        width: 3rem;
+        transform: rotate(135deg); }
+      .nav__checkbox:checked ~ .nav__btn-phone::after {
+        top: 0;
+        width: 3rem;
+        transform: rotate(-135deg); }
   .nav__btn-phone {
+    display: none;
     position: absolute;
     top: 7rem;
     right: 6rem;
-    height: 1px;
+    height: 2px;
     width: 4rem;
-    background-color: var(--color-white); }
+    background-color: var(--color-white-tr);
+    cursor: pointer; }
+    @media only screen and (max-width: 43.75em) {
+      .nav__btn-phone {
+        display: block; } }
+    .nav__btn-phone:hover {
+      transform: scaleX(0.75); }
+    .nav__btn-phone, .nav__btn-phone::before, .nav__btn-phone::after {
+      transition: all .2s; }
+      .nav__btn-phone:hover, .nav__btn-phone::before:hover, .nav__btn-phone::after:hover {
+        color: var(--color-white); }
+    .nav__btn-phone::before, .nav__btn-phone::after {
+      content: "";
+      position: absolute;
+      width: 3rem;
+      height: 2px;
+      background-color: var(--color-white-tr);
+      display: inline-block;
+      outline: none;
+      transition: all .2s; }
+      .nav__btn-phone::before:hover, .nav__btn-phone::after:hover {
+        transform: scaleX(1.1); }
     .nav__btn-phone::before {
-      content: ""; }
+      top: -.8rem;
+      width: 3rem; }
+    .nav__btn-phone::after {
+      top: .8rem;
+      width: 2.5rem; }
   @media only screen and (max-width: 43.75em) {
     .nav {
       display: none;
