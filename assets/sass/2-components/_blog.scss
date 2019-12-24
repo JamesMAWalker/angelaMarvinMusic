@@ -162,5 +162,10 @@
             grid-row: 20 / 21;
             @include flexCenter;
         }
+        &-8 {
+            grid-column: 1 / 2;
+            grid-row: 20 / 21;
+            @include flexCenter;
+        }
     }
 }
