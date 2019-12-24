@@ -3,8 +3,21 @@
 /* ------------------------------------- */
 
 
-$bp-largest: 75em;
-$bp-large: 68.75em;
-$bp-med: 56.25em; 
-$bp-small: 37.5em;
-$bp-smallest: 31.25em;
+// Breakpoints
+$bp-largest: 100em; // 1600px
+$bp-large: 81.25em; // 1300px -
+$bp-med: 68.75em; // 1100px 
+$bp-med-sm: 56.25em; // 900px
+$bp-sm-med: 50em; // 800px 
+$bp-sm: 43.75em; // 700px 
+$bp-smaller: 37.5em; // 600px 
+$bp-smallest: 35em; // 560px 
+
+/* 
+
+    @media only screen and (max-width: $bp-large) {
+        height: 80vh;
+    }
+
+
+*/

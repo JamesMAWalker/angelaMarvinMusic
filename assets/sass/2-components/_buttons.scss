@@ -11,7 +11,7 @@
     transition: all .2s;
 
     &:hover {
-        background-image: url('assets/images/play-button-blu.svg');
+        background-image: url('assets/images/play-button-pink.svg');
     }
 
     &:active {
@@ -21,7 +21,7 @@
 
 .play-button--active {
     display: none;
-    @include bgimg('assets/images/play-button-blu.svg');
+    @include bgimg('assets/images/play-button-pink.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 65%;

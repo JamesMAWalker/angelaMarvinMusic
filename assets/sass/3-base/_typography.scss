@@ -8,6 +8,10 @@
     font-size: 13.5rem;
     color: var(--color-white-tr-2);
     letter-spacing: .5rem;
+
+    @media only screen and (max-width: $bp-med) {
+        font-size: 9rem;
+    }
 }
 
 .header-1-small {
@@ -27,6 +31,18 @@
     color: var(--color-grey-dark-3);
     opacity: .3;
     letter-spacing: 1rem;
+
+    @media only screen and (max-width: $bp-med) {
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-med-sm) {
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: $bp-med-sm) {
+        font-size: 3rem;
+    }
 }
 
 .header-3 {
@@ -42,6 +58,10 @@
     letter-spacing: .5rem;
     font-weight: 200;
     color: var(--color-white-tr-2);
+
+    @media only screen and (max-width: $bp-med) {
+        font-size: 2rem;
+    }
 }
 
 .sub-header-1-dark {
@@ -50,6 +70,10 @@
     font-weight: 600;
     text-transform: uppercase;
     color: var(--color-grey-dark-3);
+
+    @media only screen and (max-width: $bp-med) {
+        font-size: 2rem;
+    }
 }
 
 .sub-header-2 {
@@ -75,6 +99,10 @@
         color: var(--color-grey-dark-3);
         font-weight: 200;
     }
+
+    @media only screen and (max-width: $bp-med-sm) {
+        font-size: 1.5rem;
+    }
 }
 
 .text-1-light {
@@ -96,6 +124,10 @@
     color: var(--color-white-tr);
     letter-spacing: .25rem;
     font-weight: 200;
+
+    @media only screen and (max-width: $bp-med-sm) {
+        letter-spacing: 0;
+    }
 }
 
 .divider-pink {

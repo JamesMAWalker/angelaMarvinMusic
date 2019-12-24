@@ -20,6 +20,10 @@
             font-size: 1.5rem;
             letter-spacing: .5rem;
             padding: 1rem;
+
+            @media only screen and (max-width: $bp-med) {
+                font-size: 1rem;
+            }
         }
 
         &:focus {
@@ -39,6 +43,10 @@
                 padding: 1rem;
                 background-color: var(--color-primary);
                 transform: scale(.75);
+            }
+
+            @media only screen and (max-width: $bp-med) {
+                font-size: 1rem;
             }
         }
 
