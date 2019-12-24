@@ -7,7 +7,7 @@
 // });
 
 
-
+//forward button
 jQuery(document).ready(function($) {
     $('.blog__item-7').on("click", function(){
         $(this).prevAll(".blog__item").css('display', 'none');
@@ -15,6 +15,8 @@ jQuery(document).ready(function($) {
         $(this).nextAll(".blog__item").slice(0,8).css('display', 'flex');
 
     })
+    
+    //back button
     $('.blog__item-8').on("click", function(){
         $(this).nextAll(".blog__item").css('display', 'none');
         $(this).css('display', 'none');

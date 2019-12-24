@@ -14,7 +14,7 @@
                 while ($homepageBlog->have_posts()) { 
                     $homepageBlog->the_post(); ?>
                     <div class="blog__item blog__item-<?php echo $counter ?>" tabindex="2" <?php if($firstloop===false) { ?>
-                    style="display:none;" <?php } ?>>
+                    class="hide" <?php } ?>>
                         <div class="blog__item-details sub-header-2 sub-header-2">
                             <span class="blog__item-category"><?php foreach((get_the_category()) as $category) { ?>
                                 <a href="<?php echo get_category_link($category->cat_ID); ?>"><?php echo $category->category_nicename ?> </a>
@@ -46,9 +46,9 @@
                             <div class="blog__item blog__item-7 text-button">View older &rarr;
                             </div>
                             <?php } else { ?>
-                            <div style="display:none;" class="blog__item blog__item-8 text-button">&larr; View newer
+                            <div class="blog__item blog__item-8 text-button hide">&larr; View newer
                             </div>
-                            <div style="display:none;" class="blog__item blog__item-7 text-button">View older &rarr;
+                            <div class="blog__item blog__item-7 text-button hide">View older &rarr;
                             </div>
                         <?php }
                         ?>
