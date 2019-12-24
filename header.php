@@ -30,7 +30,7 @@
 	<nav class="nav <?php if ($post->ID === 28) {echo 'nav--about';} ?>" data-scroll>
 		<a href="#section-listen" class="nav__item " data-scroll>music</a>
 		<a href="#section-blog" class="nav__item " data-scroll>blog</a>
-		<img class="nav__logo" src="<?php echo get_template_directory_uri()?>/assets/images/provisional-logo.svg" alt="angela marvin monogram">
+		<img class="nav__logo" src="<?php echo get_template_directory_uri()?>/assets/images/provisional-logo-blu.svg" alt="angela marvin monogram">
 		<a href="<?php get_home_url()?>/about" class="nav__item " data-scroll>about</a>
 		<a href="#section-contact" class="nav__item " data-scroll>contact</a>
 	</nav>
