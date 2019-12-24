@@ -23,7 +23,7 @@ function eq_add_favicon(){ ?>
 add_action('wp_head','eq_add_favicon');
 
 function site_features() {
-    add_theme_support( 'post-thumbnails', array('music') );
+    add_theme_support( 'post-thumbnails', array('music', 'page') );
     add_theme_support( 'custom-background' );
 }
 

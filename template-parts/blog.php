@@ -42,14 +42,17 @@
                         if($counter === 7) { 
                         $counter = 1; 
                         if($firstloop === true) {
-                            $firstloop = false;
-                        } else { ?>
-                            <div style="display:none;" class="blog__item blog__item-8 text-button">&larr View newer;
+                            $firstloop = false; ?>
+                            <div class="blog__item blog__item-7 text-button">View older &rarr;
+                            </div>
+                            <?php } else { ?>
+                            <div style="display:none;" class="blog__item blog__item-8 text-button">&larr; View newer
+                            </div>
+                            <div style="display:none;" class="blog__item blog__item-7 text-button">View older &rarr;
                             </div>
                         <?php }
                         ?>
-                        <div class="blog__item blog__item-7 text-button">View older &rarr;
-                        </div>
+
                         <?php }} ?>
             </div>
             <div class="blog__title">
