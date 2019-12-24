@@ -55,6 +55,10 @@
             margin: 1% 0;
             justify-self: center;
             align-self: center;
+
+            @media only screen and (max-width: $bp-med-sm) {
+                flex-direction: column;
+            }
         }
     }
 
@@ -74,6 +78,7 @@
 
         &-info {
             @include flexCenterCol;
+            width: 85%;
             
             & > * {
                 margin-top: .75rem;

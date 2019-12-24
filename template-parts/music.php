@@ -40,7 +40,7 @@
                 <?php
                 if (get_field('video_link')) { ?>
                     <div class="listen__exp-video-wrap">
-                        <span class="listen__exp-video-cover" tabindex="3">
+                        <!-- <span class="listen__exp-video-cover" tabindex="3"> -->
                             <span class="listen__exp-video-cover-button"></span>
                         </span>
                         <iframe class="listen__exp-video" src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>

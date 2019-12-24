@@ -17,11 +17,11 @@
 
 .listen {
     height: 75%;
-    width: 75%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 4%;
+    gap: 5%;
     font-size: 1vh;
     word-wrap: break-word;
 
@@ -30,6 +30,10 @@
         bottom: 30%;
         right: -1%;
         transform: rotate(90deg);
+
+        @media only screen and (max-width: $bp-med) {
+            right: -3%;
+        }
     }
 
     &__button {
@@ -95,7 +99,7 @@
         position: relative;
         z-index: 99;
         height: 90%;
-        width: 100%;
+        width: 90%;
         justify-content: flex-start;
         align-items: center;
         padding-left: 5%;

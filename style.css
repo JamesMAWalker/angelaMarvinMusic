@@ -11,6 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ------------------------------------- */
 /*	3. Breakpoints/Media Queries
 /* ------------------------------------- */
+/* 
+
+    @media only screen and (max-width: $bp-large) {
+        height: 80vh;
+    }
+
+
+*/
 /*--------------------------------*/
 /* Mixins */
 /*--------------------------------*/
@@ -24,6 +32,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --test-border-2: rgb(18, 0, 182);
   --test-3: rgb(33, 255, 240);
   --test-border-3: rgb(255, 85, 33);
+  --color-primary: rgb(162, 221, 234);
+  --color-primary-tr: rgba(162, 221, 234, .35);
+  --color-primary-tr-2: rgba(162, 221, 234, .75);
   --color-primary: rgb(255, 152, 177);
   --color-primary-tr: rgba(255, 152, 177, .35);
   --color-primary-tr-2: rgba(255, 152, 177, .75);
@@ -48,6 +59,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --color-grey-dark-3-tr: rgba(149, 149, 149, .35);
   --color-grey-dark-4: rgb(215, 215, 215);
   --shadow-def-primary-col: .75rem 1.5rem 1rem var(--color-primary-tr-2);
+  --shadow-def-primary-col-light: .75rem 1.5rem 1rem var(--color-primary-tr);
   --shadow-def: .5rem 1rem 1.5rem rgba(0,0,0,.3);
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
   --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
@@ -73,6 +85,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   align-items: center;
   position: relative;
   border: 1px solid var(--color-grey-dark-4); }
+  @media only screen and (max-width: 43.75em) {
+    .about-frame {
+      width: 95%;
+      height: 96%; } }
 
 .about {
   display: grid;
@@ -86,7 +102,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     justify-content: center;
     align-items: center;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     width: 70%;
@@ -142,6 +158,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   position: relative;
   align-items: flex-end;
   border: 1px solid var(--color-grey-dark-4); }
+  @media only screen and (max-width: 43.75em) {
+    .blog-frame {
+      width: 95%;
+      height: 96%; } }
 
 .blog-wrapper {
   display: flex;
@@ -269,13 +289,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 20%;
   transition: all .2s; }
   .play-button:hover {
-    background-image: url("assets/images/play-button-blu.svg"); }
+    background-image: url("assets/images/play-button-pink.svg"); }
   .play-button:active {
     transform: translateY(1px); }
 
 .play-button--active {
   display: none;
-  background-image: url("assets/images/play-button-blu.svg");
+  background-image: url("assets/images/play-button-pink.svg");
   background-position: center;
   background-size: cover;
   background-size: contain;
@@ -329,6 +349,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   align-items: center;
   position: relative;
   border: 1px solid var(--color-grey-dark-4); }
+  @media only screen and (max-width: 43.75em) {
+    .contact-frame {
+      width: 95%;
+      height: 96%; } }
 
 .contact {
   display: grid;
@@ -342,6 +366,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     transform: rotate(-90deg);
     top: 50%;
     left: -10%; }
+    @media only screen and (max-width: 81.25em) {
+      .contact__cta {
+        left: -12%; } }
+    @media only screen and (max-width: 68.75em) {
+      .contact__cta {
+        left: -13%; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__cta {
+        left: -14%; } }
   .contact__title {
     position: absolute;
     z-index: 999;
@@ -355,15 +388,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       font-size: 4rem;
       letter-spacing: 1rem;
       line-height: 0; }
+      @media only screen and (max-width: 56.25em) {
+        .contact__title-text {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 50em) {
+        .contact__title-text {
+          font-size: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__title {
+        right: -5%; } }
   .contact__radio:checked + .contact__btn-perf {
-    border: 4px solid var(--color-primary); }
+    border: 4px solid var(--color-primary);
+    box-shadow: var(--shadow-def-primary-col-light);
+    transform: scale(1.05); }
   .contact__radio:checked + .contact__btn-perf .contact__btn-violin {
     background-image: url("assets/images/violin-icon-pink.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; }
   .contact__radio:checked + .contact__btn-less {
-    border: 4px solid var(--color-primary); }
+    border: 4px solid var(--color-primary);
+    box-shadow: var(--shadow-def-primary-col-light);
+    transform: scale(1.05); }
   .contact__radio:checked + .contact__btn-less .contact__btn-apple {
     background-image: url("assets/images/apple-icon-pink.svg");
     background-position: center;
@@ -411,7 +457,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     margin-top: 10%;
     border-radius: 4px;
     background-color: var(--color-white);
-    border: 4px solid var(--color-grey-dark-4); }
+    border: 4px solid var(--color-grey-dark-4);
+    transition: all .2s; }
   .contact__btn-less {
     display: flex;
     flex-direction: column;
@@ -425,10 +472,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     margin: 5% 20%;
     border-radius: 4px;
     background-color: var(--color-white);
-    border: 4px solid var(--color-grey-dark-4); }
+    border: 4px solid var(--color-grey-dark-4);
+    transition: all .2s; }
   .contact__btn-icon {
     height: 35%;
     width: 35%; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__btn-icon {
+        height: 25%;
+        width: 25%; } }
   .contact__btn-violin {
     background-image: url("assets/images/violin-icon-grey.svg");
     background-position: center;
@@ -503,7 +555,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         transition: all .75s; }
     .contact__form-less {
       grid-row: 2 / 3;
-      grid-column: 1 / 2; }
+      grid-column: 1 / 2;
+      height: 85%; }
       .contact__form-less-top {
         display: flex;
         justify-content: space-between;
@@ -520,7 +573,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         transition-delay: .4s;
         transition: all .75s; }
     .contact__form-body {
-      height: 50%; }
+      height: 40%; }
     .contact__form-loc {
       width: 35% !important; }
 
@@ -544,6 +597,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/landing-photo.png");
   background-position: center;
   background-size: cover; }
+  @media only screen and (max-width: 43.75em) {
+    .hero {
+      width: 95%;
+      height: 96%; } }
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -607,6 +664,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     margin: 1% 0;
     justify-self: center;
     align-self: center; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__social-built {
+        flex-direction: column; } }
   .footer__center {
     display: flex;
     flex-direction: column;
@@ -627,7 +687,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      width: 85%; }
       .footer__center-info > * {
         margin-top: .75rem; }
   .footer__right {
@@ -664,6 +725,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 1.5rem;
     letter-spacing: .5rem;
     padding: 1rem; }
+    @media only screen and (max-width: 68.75em) {
+      .form__input::placeholder {
+        font-size: 1rem; } }
   .form__input:focus {
     border: 1px solid var(--color-primary);
     border-left: 4px solid var(--color-primary); }
@@ -678,6 +742,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       padding: 1rem;
       background-color: var(--color-primary);
       transform: scale(0.75); }
+    @media only screen and (max-width: 68.75em) {
+      .form__input-dropdown {
+        font-size: 1rem; } }
 
 .hidden-radio {
   visibility: hidden; }
@@ -701,14 +768,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   align-items: center;
   position: relative;
   border: 1px solid var(--color-grey-dark-4); }
+  @media only screen and (max-width: 43.75em) {
+    .listen-container {
+      width: 95%;
+      height: 96%; } }
 
 .listen {
   height: 75%;
-  width: 75%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 4%;
+  gap: 5%;
   font-size: 1vh;
   word-wrap: break-word; }
   .listen__title {
@@ -716,6 +787,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     bottom: 30%;
     right: -1%;
     transform: rotate(90deg); }
+    @media only screen and (max-width: 68.75em) {
+      .listen__title {
+        right: -3%; } }
   .listen__button {
     visibility: hidden; }
     .listen__button:checked + .listen__item {
@@ -764,7 +838,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     position: relative;
     z-index: 99;
     height: 90%;
-    width: 100%;
+    width: 90%;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5%;
@@ -901,6 +975,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: var(--color-white-tr-2); }
   .nav__logo {
     transform: scale(0.65); }
+    @media only screen and (max-width: 68.75em) {
+      .nav__logo {
+        transform: scale(0.5); } }
+    @media only screen and (max-width: 43.75em) {
+      .nav__logo {
+        display: none;
+        position: absolute;
+        padding: 0 1rem;
+        top: -1rem;
+        left: 0; } }
+    .nav__logo-phone {
+      display: none;
+      transform: scale(0.5); }
+      @media only screen and (max-width: 43.75em) {
+        .nav__logo-phone {
+          display: flex;
+          position: absolute;
+          padding: 2rem;
+          top: 0rem;
+          left: 0; } }
   .nav__item {
     font-size: 2.5rem;
     letter-spacing: .5rem;
@@ -910,6 +1004,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .nav__item:hover {
       color: var(--color-primary);
       border-bottom: 1px solid var(--color-primary); }
+    @media only screen and (max-width: 68.75em) {
+      .nav__item {
+        font-size: 2rem; } }
+  .nav__checkbox {
+    height: 0px;
+    width: 0px;
+    position: absolute; }
+  .nav__btn-phone {
+    position: absolute;
+    top: 7rem;
+    right: 6rem;
+    height: 1px;
+    width: 4rem;
+    background-color: var(--color-white); }
+    .nav__btn-phone::before {
+      content: ""; }
+  @media only screen and (max-width: 43.75em) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      height: 60vh;
+      background-color: var(--color-white);
+      color: var(--color-grey-dark-3);
+      font-size: 2rem;
+      box-shadow: var(--shadow-light);
+      border-bottom: 2px solid var(--color-primary); } }
 
 [data-scroll] {
   transform-origin: top;
@@ -923,6 +1043,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: var(--color-grey-dark-3) !important;
   border-bottom: 1px solid var(--color-primary);
   box-shadow: var(--shadow-light); }
+  @media only screen and (max-width: 68.75em) {
+    .nav[data-scroll="out"] {
+      height: 10vh;
+      transform: translateY(-25%); } }
 
 .nav--about {
   position: fixed;
@@ -1013,6 +1137,9 @@ input {
   font-size: 13.5rem;
   color: var(--color-white-tr-2);
   letter-spacing: .5rem; }
+  @media only screen and (max-width: 68.75em) {
+    .header-1 {
+      font-size: 9rem; } }
 
 .header-1-small {
   font-family: "Dawning of a New Day", cursive;
@@ -1030,6 +1157,15 @@ input {
   color: var(--color-grey-dark-3);
   opacity: .3;
   letter-spacing: 1rem; }
+  @media only screen and (max-width: 68.75em) {
+    .header-2 {
+      font-size: 4.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .header-2 {
+      font-size: 3.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .header-2 {
+      font-size: 3rem; } }
 
 .header-3 {
   font-family: "Dawning of a New Day", cursive;
@@ -1043,6 +1179,9 @@ input {
   letter-spacing: .5rem;
   font-weight: 200;
   color: var(--color-white-tr-2); }
+  @media only screen and (max-width: 68.75em) {
+    .sub-header-1 {
+      font-size: 2rem; } }
 
 .sub-header-1-dark {
   font-size: 2.5rem;
@@ -1050,6 +1189,9 @@ input {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-grey-dark-3); }
+  @media only screen and (max-width: 68.75em) {
+    .sub-header-1-dark {
+      font-size: 2rem; } }
 
 .sub-header-2 {
   font-size: 1.5rem;
@@ -1070,6 +1212,9 @@ input {
     font-size: 1.5rem;
     color: var(--color-grey-dark-3);
     font-weight: 200; }
+  @media only screen and (max-width: 56.25em) {
+    .text-1 {
+      font-size: 1.5rem; } }
 
 .text-1-light {
   font-size: 2rem;
@@ -1088,6 +1233,9 @@ input {
   color: var(--color-white-tr);
   letter-spacing: .25rem;
   font-weight: 200; }
+  @media only screen and (max-width: 56.25em) {
+    .text-2-tr {
+      letter-spacing: 0; } }
 
 .divider-pink {
   background-image: url("assets/images/curly-divider-pink.svg");

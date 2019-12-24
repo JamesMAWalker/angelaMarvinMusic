@@ -11,9 +11,9 @@
     --test-border-3: rgb(255, 85, 33);
 
 
-    // --color-primary: rgb(162, 221, 234);
-    // --color-primary-tr: rgba(162, 221, 234, .35);
-    // --color-primary-tr-2: rgba(162, 221, 234, .75);
+    --color-primary: rgb(162, 221, 234);
+    --color-primary-tr: rgba(162, 221, 234, .35);
+    --color-primary-tr-2: rgba(162, 221, 234, .75);
 
     --color-primary: rgb(255, 152, 177);
     --color-primary-tr: rgba(255, 152, 177, .35);
@@ -49,6 +49,7 @@
     --color-grey-dark-4: rgb(215, 215, 215);
 
     --shadow-def-primary-col: .75rem 1.5rem 1rem var(--color-primary-tr-2);
+    --shadow-def-primary-col-light: .75rem 1.5rem 1rem var(--color-primary-tr);
     --shadow-def: .5rem 1rem 1.5rem rgba(0,0,0,.3);
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
