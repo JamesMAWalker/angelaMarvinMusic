@@ -23,4 +23,16 @@ jQuery(document).ready(function($) {
         $(this).prevAll(".blog__item").slice(0,8).removeClass('hide');
 
     })
+
+    //mobile nav 
+    $('.nav__btn-phone').on('click', () => {
+        $('.nav').toggleClass('unhide--flex-height');
+
+        if ($('.nav').hasClass('unhide--flex-height')) {
+            $('.nav').css('height', '60vh');
+            $('.nav').css('transition', 'all .2s');
+        } else {
+            $(".nav").css("height", "0");
+        }
+    })
 });

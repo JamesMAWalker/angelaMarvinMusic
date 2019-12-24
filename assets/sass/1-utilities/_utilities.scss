@@ -6,3 +6,14 @@
 .hide {
     display: none !important;
 }
+
+.unhide {
+    display: block !important;
+}
+
+.unhide--flex-height {
+    display: flex !important;
+    transform: translateY(-5%) !important;
+    transition: all .2s !important;
+}
+
