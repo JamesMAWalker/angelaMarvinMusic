@@ -19,5 +19,13 @@ $bp-smallest: 35em; // 560px
         height: 80vh;
     }
 
+    @media only screen and (max-width: $bp-med-sm) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        height: 80vh;
+    }
+
 
 */

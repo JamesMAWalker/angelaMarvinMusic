@@ -1013,7 +1013,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       @media only screen and (max-width: 43.75em) {
         .nav__logo-phone {
           display: flex;
-          position: absolute;
+          position: fixed;
           padding: 2rem;
           top: 0rem;
           left: 0; } }
