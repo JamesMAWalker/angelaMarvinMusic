@@ -31,7 +31,7 @@
             <div class="contact__form-container">
                 <?php echo do_shortcode( '[contact-form-7 id="57" title="performances" html_class="contact__form contact__form-perf"]' ); ?>
                 
-                <form action="" class="contact__form contact__form-less">
+                <form action="" class="contact__form wpcf7 contact__form-less">
                     <div class="contact__form-less-top">
                         <select name="hrs" id="" class="form__input form__input-dropdown">
                             <option class="form__input-dropdown-option">1hr/wk</option>
