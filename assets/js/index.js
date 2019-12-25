@@ -26,4 +26,6 @@ jQuery(document).ready(function($) {
             $(".nav").css("height", "0");
         }
     })
+
+    $('div.wpcf7').addClass('wpcf7-form-wrapper');
 });
