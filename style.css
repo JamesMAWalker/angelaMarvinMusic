@@ -43,7 +43,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex !important;
   transform: scaleY(1) translateY(-5%) !important; }
 
-.wpcf7-form-wrapper {
+.wpcf7-form-wrapper-1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.wpcf7-form-wrapper-2 {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.wpcf7 {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   display: flex;
@@ -477,9 +493,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       width: 100%;
       transform: translateX(-100%) scaleX(1);
       background-color: var(--color-primary);
-      transition: all .5; }
+      transition: all .2s; }
   .contact__radio-2:checked ~ .contact__form-container {
-    transform: translateY(-50%) !important; }
+    transform: translateY(-100%) !important; }
     @media only screen and (max-width: 43.75em) {
       .contact__radio-2:checked ~ .contact__form-container {
         transform: translateY(0%) !important; } }
@@ -494,7 +510,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       width: 100%;
       transform: translateX(-100%) scaleX(1);
       background-color: var(--color-primary);
-      transition: all .5; }
+      transition: all .2s;
+      transition-timing-function: ease-in; }
   .contact__btn-perf {
     display: flex;
     flex-direction: column;
@@ -599,8 +616,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     position: relative;
     overflow: visible !important;
     z-index: 0;
-    height: 80%;
-    width: 70%;
+    width: 90%;
     align-self: center;
     justify-self: center;
     overflow: hidden;
