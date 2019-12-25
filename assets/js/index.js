@@ -20,10 +20,9 @@ jQuery(document).ready(function($) {
         $('.nav').toggleClass('unhide--flex-height');
 
         if ($('.nav').hasClass('unhide--flex-height')) {
-            $('.nav').css('height', '60vh');
-            $('.nav').css('transition', 'all .2s');
+            $('.nav').attr('data-scroll', 'disabled');
         } else {
-            $(".nav").css("height", "0");
+            $(".nav").attr("data-scroll", "out");
         }
     })
 

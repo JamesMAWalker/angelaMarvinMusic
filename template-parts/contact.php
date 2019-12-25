@@ -29,7 +29,7 @@
             </label>
             <div class="contact__form-bg"></div>
             <div class="contact__form-container">
-                <?php echo do_shortcode( '[contact-form-7 id="93" title="performances" html_class="contact__form contact__form-perf"]' ); ?>
+                <?php echo do_shortcode( '[contact-form-7 id="57" title="performances" html_class="contact__form contact__form-perf"]' ); ?>
                 
                 <form action="" class="contact__form contact__form-less">
                     <div class="contact__form-less-top">
