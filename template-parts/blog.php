@@ -42,7 +42,7 @@
                         if($counter === 7 OR $homepageBlog->current_post + 1 == $homepageBlog->post_count) { 
                             if ($homepageBlog->current_post + 1 == $homepageBlog->post_count) {
                                 for($i=$counter; $i<7; $i++){ ?>
-                                    <div class="blog__item filler__item-<?php echo $i; ?>"></div>
+                                    <div style="visibility:hidden;" class="blog__item blog__item-<?php echo $i; ?>"></div>
                                 <?php }
                             }
                         $counter = 1; 

@@ -101,7 +101,7 @@
             transform: translateY(0%);
         }
 
-        &:checked ~ .contact__form-container > .contact__form-perf {
+        &:checked ~ .contact__form-container > .wpcf7 > .contact__form-perf {
             transition: all .5;
              
             &::before {
@@ -306,7 +306,7 @@
         }
 
         &-loc {
-            width: 35% !important;
+            width: 70% !important;
         }
     }
 }
