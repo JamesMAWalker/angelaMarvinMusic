@@ -26,5 +26,6 @@ jQuery(document).ready(function($) {
         }
     })
 
-    $('div.wpcf7').addClass('wpcf7-form-wrapper');
+    $('div.wpcf7').slice(0,1).addClass('wpcf7-form-wrapper-1');
+    $('div.wpcf7').slice(1,2).addClass('wpcf7-form-wrapper-2');
 });
