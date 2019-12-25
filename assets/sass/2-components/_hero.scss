@@ -27,10 +27,23 @@
         align-items: center;
         transform: translateY(12rem);
         height: 50vh;
+
+        @media only screen and (max-width: $bp-sm) {
+           text-align: center;
+        }
     }
 
     &__subtitle {
         letter-spacing: 1rem !important;
         margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-sm) {
+            width: 70%;
+            line-height: 3rem;
+
+            & span {
+                display: none;
+            }
+        }
     }
 }

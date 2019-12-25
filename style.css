@@ -59,14 +59,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   align-items: center;
   justify-content: center; }
 
-.wpcf7 {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center; }
-
 /* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
@@ -723,9 +715,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     align-items: center;
     transform: translateY(12rem);
     height: 50vh; }
+    @media only screen and (max-width: 43.75em) {
+      .hero__container {
+        text-align: center; } }
   .hero__subtitle {
     letter-spacing: 1rem !important;
     margin-top: 3rem; }
+    @media only screen and (max-width: 43.75em) {
+      .hero__subtitle {
+        width: 70%;
+        line-height: 3rem; }
+        .hero__subtitle span {
+          display: none; } }
 
 /* ------------------------------------- */
 /*	2. Footer Section
