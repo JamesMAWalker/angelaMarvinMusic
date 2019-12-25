@@ -26,6 +26,7 @@ jQuery(document).ready(function($) {
         }
     })
 
+    //fixes an issue created by a div element that contact forms plugin inserts into the HTML
     $('div.wpcf7').slice(0,1).addClass('wpcf7-form-wrapper-1');
     $('div.wpcf7').slice(1,2).addClass('wpcf7-form-wrapper-2');
 });
