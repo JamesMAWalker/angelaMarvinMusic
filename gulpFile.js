@@ -14,6 +14,15 @@ function style() {
 
 }
 
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
 
 // Watches for changes to .css file. init() sets the source of the URL, and .watch monitors the specified files for changes, reloading the browser whenver changes are detected (as long as the task is running). 
 function watch() {
