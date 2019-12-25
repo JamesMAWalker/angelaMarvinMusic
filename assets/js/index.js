@@ -1,12 +1,3 @@
-// jQuery(document).ready(function($) {
-//     $('.blog__item-7').on("click", function(){
-//         $(this).css('display', 'none');
-//         console.log($(this).prevAll('blog__item'));
-//         $(this).prevAll('blog__item').css('display', 'none');
-//     })
-// });
-
-
 //forward button
 jQuery(document).ready(function($) {
     $('.blog__item-7').on("click", function(){
@@ -20,7 +11,7 @@ jQuery(document).ready(function($) {
         $(this).prevUntil(".blog__item-7").addClass('hide');
         $(this).addClass('hide');
         $(this).next(".blog__item-7").addClass('hide');
-        $(this).prevAll('div').slice(7,15).removeClass('hide');
+        $(this).prevAll('div').slice(6,15).removeClass('hide');
         $(this).prev(".blog__item-7").removeClass('hide');
     })
 

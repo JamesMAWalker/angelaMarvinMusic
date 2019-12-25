@@ -29,12 +29,8 @@
             </label>
             <div class="contact__form-bg"></div>
             <div class="contact__form-container">
-                <form action="" class="contact__form contact__form-perf">
-                    <input type="email" placeholder="email@domain.com" class="contact__form-email form__input form__input-email" required>
-                    <input type="text" placeholder="subject" class="contact__form-subject form__input form__input-subject" required>
-                    <textarea rows="4" cols="50" type="text" placeholder="Go ahead, I’m listening..." class="contact__form-body form__input form__input-body" required></textarea>
-                    <button type="submit" class="btn__submit text-2">submit</button>
-                </form>
+                <?php echo do_shortcode( '[contact-form-7 id="93" title="performances" html_class="contact__form contact__form-perf"]' ); ?>
+                
                 <form action="" class="contact__form contact__form-less">
                     <div class="contact__form-less-top">
                         <select name="hrs" id="" class="form__input form__input-dropdown">
@@ -62,7 +58,6 @@
                     <button type="submit" class="btn__submit text-2">submit</button>
                 </form>
             </div>
-            
         </div>
     </div>
 </section>
