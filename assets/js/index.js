@@ -25,4 +25,7 @@ jQuery(document).ready(function($) {
             $(".nav").attr("data-scroll", "out");
         }
     })
+
+    $('div.wpcf7').slice(0,1).addClass('wpcf7-form-wrapper-1');
+    $('div.wpcf7').slice(1,2).addClass('wpcf7-form-wrapper-2');
 });
