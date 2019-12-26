@@ -40,7 +40,6 @@
                 <?php
                 if (get_field('video_link')) { ?>
                     <div class="listen__exp-video-wrap">
-                        <!-- <span class="listen__exp-video-cover" tabindex="3"> -->
                             <span class="listen__exp-video-cover-button"></span>
                         </span>
                         <iframe class="listen__exp-video" src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -48,7 +47,7 @@
                     </div>
                 <?php } else { 
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail( 'medium' );
+                        the_post_thumbnail('medium', array('class' => 'listen__exp-photo'));
                     } else {
                         echo '<img class="listen__exp-photo" src="' . get_bloginfo( 'stylesheet_directory' ) 
                         . '/assets/images/default.jpg" />';
