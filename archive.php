@@ -13,19 +13,17 @@ the_post();
         <?php 
             while (have_posts()) {
                 the_post(); ?>
-        <div class="single-blog__details sub-header-2">
-
+        <div class="single-blog__details sub-header-2" style="text-align:center;">
+            <a href="<?php echo get_the_permalink(); ?>"><h3 style="text-align:center;margin-bottom:10px;"><?php echo get_the_title();?></h3></a>
             <span class="blog__item-category"><?php foreach((get_the_category()) as $category) { ?>
                 <a href="<?php echo get_category_link($category->cat_ID); ?>"><?php echo $category->category_nicename ?> </a>
                 <?php } ?> | </span>
             <span class="bold" class=""><?php echo get_the_date('m.d.y'); ?></span>
         </div>
-        <div class="single-blog__content text-1">
+        <div class="text-1" style="width:80vw!important;">
             <?php 
-
-                echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
                 the_excerpt();
-                echo '<hr>';
+                echo '<hr style="margin-top: 50px;">';
             }
             ?>
             <a href="/">
