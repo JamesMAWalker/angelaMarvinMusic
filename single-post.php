@@ -7,6 +7,9 @@ wp_head();
     
 <section class="section-single-blog">
     <div class="single-blog">
+            <a href="<?php echo get_bloginfo('url')?>">
+                <img style="height:8rem;position:absolute;top:0;left:15px;" src="<?php echo get_template_directory_uri()?>/assets/images/provisional-logo.svg" alt="angela marvin monogram">
+            </a>
         <div class="single-blog__title header-1-small">
             <?php the_title(); ?>
         </div>
