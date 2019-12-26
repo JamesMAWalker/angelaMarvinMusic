@@ -47,7 +47,7 @@
                     </div>
                 <?php } else { 
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail( 'medium' );
+                        the_post_thumbnail('medium', array('class' => 'listen__exp-photo'));
                     } else {
                         echo '<img class="listen__exp-photo" src="' . get_bloginfo( 'stylesheet_directory' ) 
                         . '/assets/images/default.jpg" />';
