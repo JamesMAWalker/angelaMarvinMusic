@@ -5,7 +5,7 @@
 .footer {
     @include flexCenter;
     background-color: var(--color-white);
-    height: 22vh;
+    height: 50vh;
     width: 100%;
 
     &-container {
@@ -23,7 +23,7 @@
         grid-template-columns: repeat(3, 1fr);
 
         @media only screen and (max-width: $bp-sm) {
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-template-columns: 1fr;
         }
     }
@@ -35,6 +35,11 @@
         width: 100%;
         @include flexCenterCol;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-sm) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
     }
 
     &__social {
@@ -77,6 +82,11 @@
         height: 100%;
         width: 100%;
 
+        @media only screen and (max-width: $bp-sm) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
         &-name {
             @include flexCenterCol;
         }
@@ -99,6 +109,12 @@
         height: 100%;
         width: 100%;
         cursor: pointer;
+
+        @media only screen and (max-width: $bp-sm) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            display: none;
+        }
 
         &:hover {
             background-color: var(--color-primary-tr);

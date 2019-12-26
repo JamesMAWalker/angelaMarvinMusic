@@ -701,13 +701,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/landing-photo.png");
+  background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/cello-body-tall.JPG");
   background-position: center;
   background-size: cover; }
   @media only screen and (max-width: 43.75em) {
     .hero {
       width: 95%;
       height: 96%; } }
+  @media only screen and (max-width: 43.75em) {
+    .hero {
+      background-size: cover;
+      background-position-x: 65%;
+      background-repeat: no-repeat; } }
+  @media only screen and (max-width: 43.75em) {
+    .hero__title {
+      transform: translateY(10rem); } }
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -736,7 +744,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   justify-content: center;
   align-items: center;
   background-color: var(--color-white);
-  height: 22vh;
+  height: 50vh;
   width: 100%; }
   .footer-container {
     background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/bokeh-meadow.jpg");
@@ -749,6 +757,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr); }
+    @media only screen and (max-width: 43.75em) {
+      .footer-container {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr; } }
   .footer__left {
     position: relative;
     grid-column: 1 / 2;
@@ -759,6 +771,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     justify-content: center;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 43.75em) {
+      .footer__left {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; } }
   .footer__social-links {
     display: flex;
     justify-content: center;
@@ -794,6 +810,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     grid-column: 2 / 3;
     height: 100%;
     width: 100%; }
+    @media only screen and (max-width: 43.75em) {
+      .footer__center {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; } }
     .footer__center-name {
       display: flex;
       flex-direction: column;
@@ -816,6 +836,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: 100%;
     width: 100%;
     cursor: pointer; }
+    @media only screen and (max-width: 43.75em) {
+      .footer__right {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: none; } }
     .footer__right:hover {
       background-color: var(--color-primary-tr); }
     .footer__right-totop {
@@ -1186,6 +1211,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       .nav__item {
         font-size: 2rem; } }
   .nav__checkbox {
+    visibility: hidden;
     height: 0px;
     width: 0px;
     position: absolute; }
@@ -1291,7 +1317,6 @@ html {
   margin: 0;
   margin-inline: 0 !important;
   margin-block: 0 !important;
-  user-select: none;
   scroll-behavior: smooth;
   overflow-x: hidden; }
   html::selection {
@@ -1363,6 +1388,10 @@ input {
   @media only screen and (max-width: 68.75em) {
     .header-1 {
       font-size: 9rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .header-1 {
+      font-size: 4rem;
+      line-height: 7rem; } }
 
 .header-1-small {
   font-family: "Dawning of a New Day", cursive;
@@ -1405,6 +1434,9 @@ input {
   @media only screen and (max-width: 68.75em) {
     .sub-header-1 {
       font-size: 2rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .sub-header-1 {
+      font-size: 1.5rem; } }
 
 .sub-header-1-dark {
   font-size: 2.5rem;

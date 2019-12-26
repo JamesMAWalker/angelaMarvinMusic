@@ -17,8 +17,20 @@
     @include bgimggrad(
         var(--color-black-tr-1),
         var(--color-black-tr-1),
-       'assets/images/landing-photo.png',
+       'assets/images/cello-body-tall.JPG',
     );
+
+    @media only screen and (max-width: $bp-sm) {
+        background-size: cover;
+        background-position-x: 65%;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        @media only screen and (max-width: $bp-sm) {
+           transform: translateY(10rem);
+        }
+    }
 
     &__container {
         display: flex;
