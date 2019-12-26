@@ -337,7 +337,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       display: flex;
       font-size: 1.5vw !important; }
     .blog__item-category {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      transition: all .2s; }
+      .blog__item-category:hover {
+        color: var(--color-primary); }
     .blog__item-date {
       font-weight: 600; }
     .blog__item-title {
@@ -423,7 +426,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: var(--color-white); }
 
@@ -985,7 +988,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     align-self: center; }
   .footer__social-icon {
     height: 2.5rem;
-    width: 2.5rem; }
+    width: 2.5rem;
+    opacity: .85;
+    transition: all .2s; }
+    .footer__social-icon:hover {
+      transform: scale(1.075);
+      opacity: 1; }
   .footer__social-built {
     display: flex;
     justify-content: center;
