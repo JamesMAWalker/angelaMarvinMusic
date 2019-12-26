@@ -12,6 +12,11 @@
     @media only screen and (max-width: $bp-med) {
         font-size: 9rem;
     }
+
+    @media only screen and (max-width: $bp-sm) {
+        font-size: 4rem;
+        line-height: 7rem;
+    }
 }
 
 .header-1-small {
@@ -61,6 +66,10 @@
 
     @media only screen and (max-width: $bp-med) {
         font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        font-size: 1.5rem;
     }
 }
 
