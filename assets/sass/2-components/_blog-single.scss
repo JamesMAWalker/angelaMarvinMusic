@@ -5,23 +5,33 @@
 
 .section-single-blog {
     @include flexCenter;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     background-color: var(--color-white);
 }
 
 .single-blog {
     @include flexFramer;
+    height: 98%;
+    max-height: 100%;
     justify-content: flex-start;
     flex-direction: column;
     position: relative;
     border: 1px solid var(--color-grey-dark-4);
+
+    @media only screen and (max-width: $bp-sm) {
+        height: 98% !important;
+    }
 
     &__title {
         color: var(--color-primary) !important;
         font-size: 6rem !important;
         text-transform: capitalize;
         padding: 3rem 0;
+
+        @media only screen and (max-width: $bp-med) {
+            padding-top: 7rem;
+        }
     }
 
     &__details {
@@ -29,9 +39,16 @@
     }
 
     &__content {
+        @include flexCenterCol;
         width: 50%;
         padding: 3rem;
-        @include flexCenterCol;
+        // max-height: 60%;
+
+        @media only screen and (max-width: $bp-med) {
+            width: 85%;
+            font-size: 3rem !important;
+
+        }
     }
 
     &__btn {

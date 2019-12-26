@@ -374,18 +374,20 @@
                 width: 75%;
 
                 & .lessons-hours {
-                    width: 25%;
-
+                    width: 45%;
+                    
                     & input {
                         width: 100%;
+                        height: 80%;
                     }
                 }
 
                 & .lessons-location {
-                    width: 65%;
+                    width: 50%;
 
                     & input {
                         width: 100%;
+                        height: 80%;
                     }
                 }
             }
