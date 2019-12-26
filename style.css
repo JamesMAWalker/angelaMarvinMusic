@@ -9,57 +9,6 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ------------------------------------- */
-/*	3. Breakpoints/Media Queries
-/* ------------------------------------- */
-/* 
-
-    @media only screen and (max-width: $bp-large) {
-        height: 80vh;
-    }
-
-    @media only screen and (max-width: $bp-med-sm) {
-        height: 80vh;
-    }
-
-    @media only screen and (max-width: $bp-sm) {
-        height: 80vh;
-    }
-
-
-*/
-/*--------------------------------*/
-/* Mixins */
-/*--------------------------------*/
-/* ------------------------------------- */
-/*	2. Utility Classes
-/* ------------------------------------- */
-.hide {
-  display: none !important; }
-
-.unhide {
-  display: block !important; }
-
-.unhide--flex-height {
-  display: flex !important;
-  transform: scaleY(1) translateY(-5%) !important; }
-
-.wpcf7-form-wrapper-1 {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center; }
-
-.wpcf7-form-wrapper-2 {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center; }
-
-/* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
 :root {
@@ -102,6 +51,76 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
   --text-shadow: 1px 5px 5px rgba(0,0,0, .5);
   --line: 1px solid var(--color-grey-light-3); }
+
+/* ------------------------------------- */
+/*	3. Breakpoints/Media Queries
+/* ------------------------------------- */
+/* 
+
+    @media only screen and (max-width: $bp-large) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $bp-med-sm) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        height: 80vh;
+    }
+
+
+*/
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+/* ------------------------------------- */
+/*	2. Utility Classes
+/* ------------------------------------- */
+.hide {
+  display: none !important; }
+
+.unhide {
+  display: block !important; }
+
+.unhide--flex-height {
+  display: flex !important;
+  transform: scaleY(1) translateY(-10%) !important; }
+
+.wpcf7-form-wrapper-1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 43.75em) {
+    .wpcf7-form-wrapper-1 {
+      grid-row: 1 / 2; } }
+
+.wpcf7-form-wrapper-2 {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 43.75em) {
+    .wpcf7-form-wrapper-2 {
+      grid-row: 2 / 3; } }
+
+.wpcf7-response-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 0 5px 0 !important;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  color: var(--color-white-tr);
+  background-color: transparent;
+  border-radius: 4px;
+  border: none !important; }
 
 /* ------------------------------------- */
 /*	2. About Page
@@ -224,6 +243,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   grid-template-rows: repeat(20, 1fr);
   overflow-x: hidden;
   transform: translateX(-3%); }
+  @media only screen and (max-width: 43.75em) {
+    .blog {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(20, 1fr); } }
+  @media only screen and (max-width: 43.75em) and (max-width: 43.75em) {
+    .blog {
+      gap: 2rem;
+      grid-template-rows: repeat(20, 5rem); } }
   .blog__title {
     position: absolute;
     bottom: 25%;
@@ -278,47 +305,83 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       border-left: 1px solid var(--color-grey-dark-3); }
     .blog__item-details {
       display: flex;
-      font-size: 1vw !important; }
+      font-size: 1.5vw !important; }
     .blog__item-category {
       text-transform: uppercase; }
     .blog__item-date {
       font-weight: 600; }
     .blog__item-title {
-      font-size: 1.5vw !important; }
+      font-size: 1rem !important; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-title {
+          margin: 1rem 0; } }
     .blog__item-content {
-      font-size: .95vw !important; }
+      font-size: 1rem !important;
+      width: 90%; }
     .blog__item-link {
-      height: 2vw; }
+      height: 1.5vw; }
     .blog__item-1 {
       grid-column: 1 / 2;
       grid-row: 1 / 6; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-1 {
+          grid-row: 1 / 3; } }
     .blog__item-2 {
       grid-column: 2 / 3;
       grid-row: 3 / 7; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-2 {
+          grid-column: 1 / 2;
+          grid-row: 3 / 6; } }
     .blog__item-3 {
       grid-column: 1 / 2;
       grid-row: 7 / 11; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-3 {
+          grid-column: 1 / 2;
+          grid-row: 6 / 8; } }
     .blog__item-4 {
       grid-column: 2 / 3;
       grid-row: 8 / 13; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-4 {
+          grid-column: 1 / 2;
+          grid-row: 8 / 11; } }
     .blog__item-5 {
       grid-column: 1 / 2;
       grid-row: 12 / 18; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-5 {
+          grid-column: 1 / 2;
+          grid-row: 11 / 14; } }
     .blog__item-6 {
       grid-column: 2 / 3;
       grid-row: 14 / 19; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-6 {
+          grid-column: 1 / 2;
+          grid-row: 14 / 18; } }
     .blog__item-7 {
       grid-column: 2 / 3;
-      grid-row: 20 / 21;
+      grid-row: 19 / 21;
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-7 {
+          grid-column: 1 / 2;
+          justify-content: flex-end;
+          align-items: flex-end;
+          padding: 1rem; } }
     .blog__item-8 {
       grid-column: 1 / 2;
-      grid-row: 20 / 21;
+      grid-row: 19 / 21;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 1rem; }
 
 /*--------------------------------*/
 /* Mixins */
@@ -381,12 +444,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   justify-content: center;
   align-items: center;
   height: 92vh;
+  min-height: 70rem;
   width: 100vw;
   background-color: var(--color-white);
   overflow-x: hidden; }
   @media only screen and (max-width: 43.75em) {
     .section-contact {
-      height: 200vh; } }
+      height: 150vh; } }
 
 .contact-frame {
   width: 97%;
@@ -402,7 +466,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       height: 96%; } }
   @media only screen and (max-width: 43.75em) {
     .contact-frame {
-      height: 200vh; } }
+      height: 100%; } }
 
 .contact {
   display: grid;
@@ -414,7 +478,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   @media only screen and (max-width: 43.75em) {
     .contact {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr; } }
+      grid-template-rows: 1fr;
+      width: 100%;
+      height: 100%;
+      min-height: 100%; } }
   .contact__cta {
     position: absolute;
     transform: rotate(-90deg);
@@ -429,6 +496,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     @media only screen and (max-width: 56.25em) {
       .contact__cta {
         left: -14%; } }
+    @media only screen and (max-width: 43.75em) {
+      .contact__cta {
+        display: none; } }
   .contact__title {
     position: absolute;
     z-index: 999;
@@ -485,7 +555,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       width: 60%;
       transform: translateX(-100%) scaleX(1);
       background-color: var(--color-primary);
-      transition: all .2s; }
+      transition: all .2s;
+      transition-timing-function: ease-in; }
   .contact__radio-2:checked ~ .contact__form-container {
     transform: translateY(-100%) !important; }
     @media only screen and (max-width: 43.75em) {
@@ -578,17 +649,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     z-index: 0; }
     @media only screen and (max-width: 43.75em) {
       .contact__form-bg {
-        grid-row: 1 / span all;
-        grid-column: 1 / span all;
-        background-image: url("assets/images/cello-body-tall.JPG");
+        background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/cello-body-tall.JPG");
         background-position: center;
-        background-size: cover; } }
+        background-size: cover;
+        background-position-x: 55% !important;
+        grid-row: 1 / span all;
+        grid-column: 1 / span all; } }
   .contact__form-container {
     grid-row: 1 / span all;
     grid-column: 2 / 3;
     display: grid;
     z-index: 0;
-    grid-template-rows: repeat(2, 100%);
+    grid-template-rows: repeat(2, 50%);
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
@@ -598,6 +670,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     @media only screen and (max-width: 43.75em) {
       .contact__form-container {
         height: 100%;
+        grid-column: 1 / span all;
         transform: translateY(0%) !important; } }
   .contact__form {
     display: flex;
@@ -630,7 +703,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .contact__form-perf {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
-      transition: all .5; }
+      transition: all .5;
+      position: relative; }
       .contact__form-perf::before {
         content: "";
         position: absolute;
@@ -647,15 +721,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             display: none; } }
       @media only screen and (max-width: 43.75em) {
         .contact__form-perf::after {
-          content: "contact for | performance";
+          content: "contact for   //   performance";
           text-transform: uppercase;
           position: absolute;
-          left: 0rem;
-          top: 0;
+          left: -3rem;
+          bottom: 25%;
           height: 3rem;
           width: 100rem;
-          font-size: 2.5rem;
-          transform: translateY(-100%) rotate(-90deg);
+          font-size: 2rem;
+          transform-origin: left;
+          transform: rotate(-90deg);
           color: var(--color-primary); } }
     .contact__form-less {
       grid-row: 2 / 3;
@@ -665,6 +740,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         display: flex;
         justify-content: space-between;
         width: 75%; }
+        .contact__form-less-top .lessons-hours {
+          width: 25%; }
+          .contact__form-less-top .lessons-hours input {
+            width: 100%; }
+        .contact__form-less-top .lessons-location {
+          width: 65%; }
+          .contact__form-less-top .lessons-location input {
+            width: 100%; }
+      .contact__form-less p {
+        width: 75%; }
+        .contact__form-less p span {
+          width: 100%; }
+          .contact__form-less p span input {
+            width: 100%; }
+          .contact__form-less p span textarea {
+            width: 100%;
+            height: 20rem; }
       .contact__form-less::before {
         content: "";
         position: absolute;
@@ -681,20 +773,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             display: none; } }
       @media only screen and (max-width: 43.75em) {
         .contact__form-less::after {
-          content: "contact for | lessons";
+          content: "contact for   //   lessons";
           text-transform: uppercase;
           position: absolute;
-          left: -1rem;
-          top: 0;
+          left: -3rem;
+          bottom: 25%;
           height: 3rem;
           width: 100rem;
-          font-size: 2.5rem;
-          transform: translateY(-100%) rotate(-90deg);
+          font-size: 2rem;
+          transform-origin: left;
+          transform: rotate(-90deg);
           color: var(--color-primary); } }
     .contact__form-body {
       height: 40%; }
-    .contact__form-loc {
-      width: 70% !important; }
 
 /* ------------------------------------- */
 /*	2. Hero Section
@@ -723,7 +814,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   @media only screen and (max-width: 43.75em) {
     .hero {
       background-size: cover;
-      background-position-x: 65%;
+      background-position-x: 65% !important;
       background-repeat: no-repeat;
       background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/cello-body-tall.JPG");
       background-position: center;
@@ -759,8 +850,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   justify-content: center;
   align-items: center;
   background-color: var(--color-white);
-  height: 50vh;
+  height: 20vh;
   width: 100%; }
+  @media only screen and (max-width: 43.75em) {
+    .footer {
+      height: 50vh; } }
   .footer-container {
     background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/bokeh-meadow.jpg");
     background-position: center;
@@ -1093,7 +1187,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .listen__exp-video-wrap {
       position: relative;
       height: 50%;
-      width: 85%;
+      width: 70%;
       border-radius: 4px; }
     .listen__exp-video-cover {
       background-image: url("assets/images/landing-photo.png");
@@ -1129,11 +1223,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       border: 1px solid var(--color-primary); }
     .listen__exp-photo {
       height: 45%;
-      width: 85%;
+      width: 70%;
       object-fit: cover;
       object-position: center;
       padding: 1vw;
       border-radius: 12px; }
+      @media only screen and (max-width: 43.75em) {
+        .listen__exp-photo {
+          width: 80%; } }
     .listen__exp-controls {
       display: flex;
       justify-content: center;
@@ -1179,7 +1276,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .nav {
   position: absolute;
   z-index: 998;
-  top: 2%;
+  top: 4%;
   left: 0;
   width: 100%;
   height: 11vh;
@@ -1190,12 +1287,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: var(--color-white-tr-2);
   transition: all .2s; }
   .nav__logo {
-    transform: scale(0.65);
+    height: 80%;
     z-index: 9999;
     cursor: pointer; }
-    @media only screen and (max-width: 68.75em) {
-      .nav__logo {
-        transform: scale(0.5); } }
     @media only screen and (max-width: 43.75em) {
       .nav__logo {
         display: none;
@@ -1205,13 +1299,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         left: 0; } }
     .nav__logo-phone {
       display: none;
-      transform: scale(0.5); }
+      transform: scale(0.4); }
       @media only screen and (max-width: 43.75em) {
         .nav__logo-phone {
           display: flex;
           position: fixed;
+          z-index: 999;
           padding: 2rem;
-          top: 0rem;
+          top: -4rem;
           left: 0; } }
   .nav__item {
     font-size: 2.5rem;
@@ -1248,7 +1343,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     display: none;
     position: fixed;
     z-index: 999;
-    top: 7rem;
+    top: 4rem;
     right: 6rem;
     height: 2px;
     width: 4rem;
@@ -1280,13 +1375,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       width: 2.5rem; }
   @media only screen and (max-width: 43.75em) {
     .nav {
-      display: none;
       position: fixed;
-      z-index: 99;
+      z-index: 100;
       flex-direction: column;
       height: 60vh;
-      transform: scaleY(0);
+      transform: translateY(-90%);
       background-color: var(--color-white);
+      padding-bottom: 3rem;
       color: var(--color-grey-dark-3);
       font-size: 2rem;
       box-shadow: var(--shadow-light);
@@ -1296,7 +1391,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   transform-origin: top;
   transition: all .2s; }
 
-.nav[data-scroll="out"] {
+.navbar[data-scroll="out"] {
   position: fixed;
   top: 2%;
   transform: translateY(-20%);
@@ -1305,11 +1400,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-bottom: 1px solid var(--color-primary);
   box-shadow: var(--shadow-light); }
   @media only screen and (max-width: 68.75em) {
-    .nav[data-scroll="out"] {
+    .navbar[data-scroll="out"] {
       height: 10vh;
       transform: translateY(-25%); } }
   @media only screen and (max-width: 43.75em) {
-    .nav[data-scroll="out"] {
+    .navbar[data-scroll="out"] {
       height: 60vh; } }
 
 .nav--about {
@@ -1351,6 +1446,9 @@ body {
   letter-spacing: -0.015em;
   text-align: left;
   margin: 0; }
+
+section {
+  min-height: 80rem; }
 
 figure {
   margin: 0; }

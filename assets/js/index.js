@@ -1,3 +1,10 @@
+
+
+// Phone size breakpoint
+const bpSmaller = window.matchMedia("(max-width: 700px");
+
+
+
 //forward button
 jQuery(document).ready(function($) {
     $('.blog__item-7').on("click", function(){
@@ -25,6 +32,16 @@ jQuery(document).ready(function($) {
             $(".nav").attr("data-scroll", "out");
         }
     })
+
+    // Mobile menu position
+    if (bpSmaller) {
+      $('.nav').css("transform", "translateY(-90%)");
+
+      $('.nav__item').on('click', () => {
+          $(".nav").toggleClass("unhide--flex-height");
+          $('.nav__checkbox').removeAttr('checked');
+      })
+    }
 
     //fixes an issue created by a div element that contact forms plugin inserts into the HTML
     $('div.wpcf7').slice(0,1).addClass('wpcf7-form-wrapper-1');

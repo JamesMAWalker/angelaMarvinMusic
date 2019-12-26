@@ -50,7 +50,7 @@
                     if (has_post_thumbnail()) {
                         the_post_thumbnail( 'medium' );
                     } else {
-                        echo '<img class="listen__exp-photo" style="max-height:50vh;max-width:50vw;" src="' . get_bloginfo( 'stylesheet_directory' ) 
+                        echo '<img class="listen__exp-photo" src="' . get_bloginfo( 'stylesheet_directory' ) 
                         . '/assets/images/default.jpg" />';
                     }
                     ?>
