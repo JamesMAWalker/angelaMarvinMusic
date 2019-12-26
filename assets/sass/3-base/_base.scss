@@ -20,8 +20,13 @@ html {
 
 
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+	outline: var(--color-primary);
+    width: 5px;  
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-grey-light-4);
+	border-radius: 10px;
 }
 
 

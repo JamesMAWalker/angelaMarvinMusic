@@ -158,7 +158,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   grid-template-columns: 1fr 1fr;
   grid-template-rows: .15fr 1fr;
   height: 100%;
-  width: 100%; }
+  width: 90%; }
   @media only screen and (max-width: 43.75em) {
     .about {
       grid-template-columns: 100%;
@@ -236,7 +236,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   justify-content: center;
   align-items: center;
   position: relative;
-  align-items: flex-end;
+  align-items: center;
   border: 1px solid var(--color-grey-dark-4); }
   @media only screen and (max-width: 43.75em) {
     .blog-frame {
@@ -299,19 +299,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: var(--color-grey-dark-3);
     cursor: pointer;
     transition: all .4s; }
-    .blog__item:focus {
-      z-index: 99;
-      grid-row: 1 / span all;
-      grid-column: 1 / span all;
-      background-color: var(--color-white);
-      text-align: left;
-      height: 100%;
-      width: 95%;
-      align-self: center;
-      justify-self: center;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
-      border: 1px solid var(--color-primary); }
     .blog__item-1, .blog__item-3, .blog__item-5 {
       text-align: right;
       align-items: flex-end;
@@ -349,8 +336,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         .blog__item-title {
           margin: 1rem 0; } }
     .blog__item-content {
-      font-size: 1rem !important;
+      font-size: 1.5rem !important;
       width: 90%; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-content {
+          font-size: 1rem !important; } }
     .blog__item-link {
       height: 1.5vw; }
     .blog__item-1 {
@@ -618,7 +608,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   .contact__radio:checked + .contact__btn-perf {
     border: 4px solid var(--color-primary);
     box-shadow: var(--shadow-def-primary-col-light);
-    transform: scale(1.05); }
+    transform: scale(0.9); }
   .contact__radio:checked + .contact__btn-perf .contact__btn-violin {
     background-image: url("assets/images/violin-icon-pink.svg");
     background-position: center;
@@ -627,7 +617,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   .contact__radio:checked + .contact__btn-less {
     border: 4px solid var(--color-primary);
     box-shadow: var(--shadow-def-primary-col-light);
-    transform: scale(1.05); }
+    transform: scale(0.9); }
   .contact__radio:checked + .contact__btn-less .contact__btn-apple {
     background-image: url("assets/images/apple-icon-pink.svg");
     background-position: center;
@@ -676,12 +666,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     height: 75%;
+    transform: scale(0.85);
     margin: 0 20%;
     margin-top: 10%;
     border-radius: 4px;
     background-color: var(--color-white);
     border: 4px solid var(--color-grey-dark-4);
-    transition: all .2s; }
+    transition: all .2s;
+    align-self: center; }
     @media only screen and (max-width: 43.75em) {
       .contact__btn-perf {
         display: none; } }
@@ -694,6 +686,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     z-index: 2;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    transform: scale(0.85);
     height: 75%;
     margin: 5% 20%;
     border-radius: 4px;
@@ -1096,7 +1089,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         font-size: 1rem; } }
 
 .hidden-radio {
-  visibility: hidden; }
+  visibility: hidden;
+  position: absolute; }
 
 /* ------------------------------------- */
 /*	2. Listen Section 
@@ -1255,7 +1249,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     background-color: var(--color-white);
     border: 1px solid var(--color-primary);
     border-radius: 4px;
-    cursor: pointer; }
+    overflow-y: scroll; }
     @media only screen and (max-width: 43.75em) {
       .listen__exp-1, .listen__exp-2, .listen__exp-3, .listen__exp-4 {
         grid-row: 1 / 2;
@@ -1291,30 +1285,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       @media only screen and (max-width: 43.75em) {
         .listen__exp-video-wrap {
           width: 80%; } }
-    .listen__exp-video-cover {
-      background-image: url("assets/images/landing-photo.png");
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 99;
-      height: 100%;
-      width: 100%;
-      border-radius: 4px; }
-      .listen__exp-video-cover:focus {
-        z-index: -1; }
-      .listen__exp-video-cover-button {
-        background-image: url("assets/images/play-button-blu-tr.svg");
-        background-position: center;
-        background-size: cover;
-        height: 25%;
-        width: 25%;
-        background-size: contain;
-        background-repeat: no-repeat; }
     .listen__exp-video {
       height: 100%;
       width: 100%;
@@ -1322,7 +1292,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       object-position: center;
       border-style: none;
       border-radius: 4px;
-      border: 1px solid var(--color-primary); }
+      border: 1px solid var(--color-primary);
+      position: relative;
+      z-index: 111; }
     .listen__exp-photo {
       height: 45%;
       width: 70%;
@@ -1341,7 +1313,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       height: 10%;
       width: 50%;
       border-radius: 100px;
-      box-shadow: var(--shadow-def-primary-col); }
+      background-color: transparent; }
       @media only screen and (max-width: 43.75em) {
         .listen__exp-controls {
           width: 40%;
@@ -1536,10 +1508,12 @@ html {
     color: var(--color-primary); }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  /* Remove scrollbar space */
-  background: transparent;
-  /* Optional: just make scrollbar invisible */ }
+  outline: var(--color-primary);
+  width: 5px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey-light-4);
+  border-radius: 10px; }
 
 body {
   box-sizing: border-box;
