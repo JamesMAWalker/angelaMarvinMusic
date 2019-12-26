@@ -18,7 +18,7 @@
 
     &__logo {
         height: 80%;
-        // transform: scale(.65);
+        transform: scale(.65);
         z-index: 9999;
         cursor: pointer;
 
@@ -167,7 +167,7 @@
     transition: all .2s;
 }
 
-.navbar[data-scroll="out"] {
+.nav[data-scroll="out"] {
     position: fixed;
     top: 2%;
     transform: translateY(-20%);

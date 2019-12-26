@@ -34,7 +34,8 @@ jQuery(document).ready(function($) {
     })
 
     // Mobile menu position
-    if (bpSmaller) {
+    if (bpSmaller.matches) {
+      $(".nav").attr("data-scroll", "disabled");
       $('.nav').css("transform", "translateY(-90%)");
 
       $('.nav__item').on('click', () => {

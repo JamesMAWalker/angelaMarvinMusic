@@ -9,6 +9,10 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// * Google Fonts //
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Nunito:200,300,400&display=swap);
+
+
 // * SASS Imports //
 
 // 1 - Utilities
@@ -20,6 +24,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 // 2- Components
 @import "2-components/about";
 @import "2-components/blog";
+@import "2-components/blog-single";
 @import "2-components/buttons";
 @import "2-components/contact";
 @import "2-components/hero";

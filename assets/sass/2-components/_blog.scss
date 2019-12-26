@@ -22,6 +22,10 @@
     width: 75%;
     height: 75vh;
     overflow-y: scroll;
+
+    @media only screen and (max-width: $bp-sm) {
+        height: 85vh;
+    }
 }
 
 .blog {
@@ -52,6 +56,11 @@
         bottom: 25%;
         right: -1%;
         transform: rotate(90deg);
+
+        @media only screen and (max-width: $bp-sm) {
+            bottom: 75%;
+            right: -3%;
+        }
     }
 
     &__item {
@@ -217,9 +226,13 @@
             grid-column: 1 / 2;
             grid-row: 19 / 21;
             @include flexCenter;
-            justify-content: flex-start;
-            align-items: flex-start;
             padding: 1rem;
+
+            @media only screen and (max-width: $bp-sm) {
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 1rem;
+            }
         }
     }
 }

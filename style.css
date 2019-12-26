@@ -8,6 +8,7 @@ Description: Template for creating custom WP themes.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Nunito:200,300,400&display=swap);
 /* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
@@ -77,6 +78,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ------------------------------------- */
 /*	2. Utility Classes
 /* ------------------------------------- */
+.bold {
+  font-weight: bold !important; }
+
 .hide {
   display: none !important; }
 
@@ -228,6 +232,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 75%;
   height: 75vh;
   overflow-y: scroll; }
+  @media only screen and (max-width: 43.75em) {
+    .blog-wrapper {
+      height: 85vh; } }
 
 .blog {
   display: flex;
@@ -256,6 +263,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     bottom: 25%;
     right: -1%;
     transform: rotate(90deg); }
+    @media only screen and (max-width: 43.75em) {
+      .blog__title {
+        bottom: 75%;
+        right: -3%; } }
   .blog__item {
     position: relative;
     border-radius: 4px;
@@ -379,9 +390,55 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       display: flex;
       justify-content: center;
       align-items: center;
-      justify-content: flex-start;
-      align-items: flex-start;
       padding: 1rem; }
+      @media only screen and (max-width: 43.75em) {
+        .blog__item-8 {
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 1rem; } }
+
+/* ------------------------------------- */
+/*	2.Single Blog Page
+/* ------------------------------------- */
+.section-single-blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-white); }
+
+.single-blog {
+  width: 97%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--color-grey-dark-4); }
+  @media only screen and (max-width: 43.75em) {
+    .single-blog {
+      width: 95%;
+      height: 96%; } }
+  .single-blog__title {
+    color: var(--color-primary) !important;
+    font-size: 6rem !important;
+    text-transform: capitalize;
+    padding: 3rem 0; }
+  .single-blog__details {
+    padding: 2rem 0; }
+  .single-blog__content {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .single-blog__btn {
+    margin: 4rem;
+    align-self: flex-end; }
 
 /*--------------------------------*/
 /* Mixins */
@@ -660,7 +717,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     grid-column: 2 / 3;
     display: grid;
     z-index: 0;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, 100%);
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
@@ -671,7 +728,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       .contact__form-container {
         height: 100%;
         grid-column: 1 / span all;
-        transform: translateY(0%) !important; } }
+        transform: translateY(0%) !important;
+        grid-template-rows: repeat(2, 50%); } }
   .contact__form {
     display: flex;
     flex-direction: column;
@@ -1189,6 +1247,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       height: 50%;
       width: 70%;
       border-radius: 4px; }
+      @media only screen and (max-width: 43.75em) {
+        .listen__exp-video-wrap {
+          width: 80%; } }
     .listen__exp-video-cover {
       background-image: url("assets/images/landing-photo.png");
       background-position: center;
@@ -1226,8 +1287,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       width: 70%;
       object-fit: cover;
       object-position: center;
-      padding: 1vw;
-      border-radius: 12px; }
+      margin-top: 3rem;
+      border-radius: 4px; }
       @media only screen and (max-width: 43.75em) {
         .listen__exp-photo {
           width: 80%; } }
@@ -1288,6 +1349,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   transition: all .2s; }
   .nav__logo {
     height: 80%;
+    transform: scale(0.65);
     z-index: 9999;
     cursor: pointer; }
     @media only screen and (max-width: 43.75em) {
@@ -1391,7 +1453,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   transform-origin: top;
   transition: all .2s; }
 
-.navbar[data-scroll="out"] {
+.nav[data-scroll="out"] {
   position: fixed;
   top: 2%;
   transform: translateY(-20%);
@@ -1400,11 +1462,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-bottom: 1px solid var(--color-primary);
   box-shadow: var(--shadow-light); }
   @media only screen and (max-width: 68.75em) {
-    .navbar[data-scroll="out"] {
+    .nav[data-scroll="out"] {
       height: 10vh;
       transform: translateY(-25%); } }
   @media only screen and (max-width: 43.75em) {
-    .navbar[data-scroll="out"] {
+    .nav[data-scroll="out"] {
       height: 60vh; } }
 
 .nav--about {

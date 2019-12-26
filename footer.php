@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="footer__right">
-                <a class="footer__right" href="#section-hero">
+                <a class="footer__right" href="#">
                     <span class="text-2">BACK TO TOP</span>
                     <span class="btn__up"></span>
                 </a>
