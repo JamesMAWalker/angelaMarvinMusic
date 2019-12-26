@@ -17,13 +17,18 @@
     @include bgimggrad(
         var(--color-black-tr-1),
         var(--color-black-tr-1),
-       'assets/images/cello-body-tall.JPG',
+       'assets/images/landing-photo.png',
     );
 
     @media only screen and (max-width: $bp-sm) {
         background-size: cover;
         background-position-x: 65%;
         background-repeat: no-repeat;
+        @include bgimggrad(
+            var(--color-black-tr-1),
+            var(--color-black-tr-1),
+        'assets/images/cello-body-tall.JPG',
+        );
     }
 
     &__title {
