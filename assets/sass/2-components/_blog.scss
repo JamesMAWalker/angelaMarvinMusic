@@ -128,6 +128,11 @@
 
         &-category {
             text-transform: uppercase;
+            transition: all .2s;
+
+            &:hover {
+                color: var(--color-primary);
+            }
         }
 
         &-date {

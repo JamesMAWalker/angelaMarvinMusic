@@ -59,6 +59,13 @@
         &-icon {
             height: 2.5rem;
             width: 2.5rem;
+            opacity: .85;
+            transition: all .2s;
+
+            &:hover {
+                transform: scale(1.075);
+                opacity: 1;
+            }
         }
 
         &-built {

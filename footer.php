@@ -2,16 +2,16 @@
             <div class="footer-container">
                 <div class="footer__left">
                     <div class="footer__social-links">
-                        <a href="">
+                        <a href="https://www.facebook.com/AngelaMarvin9">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/fb-icon.svg" alt="" class="footer__social-icon">
                         </a>
-                        <a href="">
+                        <a href="https://www.instagram.com/cello_is_my_forte/">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/insta-icon.svg" alt="" class="footer__social-icon">
                         </a>
-                        <a href="">
+                        <a href="https://www.youtube.com/channel/UCCMEQmCkp8_MWwrz9igVLsQ">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/yt-icon.svg" alt="" class="footer__social-icon">
                         </a>
-                        <a href="">
+                        <a href="https://soundcloud.com/angela-michelle-marvin">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/soundcloud-icon.svg" alt="" class="footer__social-icon">
                         </a>
                     </div>
