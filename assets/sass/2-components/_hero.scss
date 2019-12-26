@@ -12,7 +12,7 @@
 }
 
 .hero {
-    @include flexFramer
+    @include flexFramer;
     // background-image: url('assets/images/landing-photo.png');
     @include bgimggrad(
         var(--color-black-tr-1),
@@ -22,7 +22,7 @@
 
     @media only screen and (max-width: $bp-sm) {
         background-size: cover;
-        background-position-x: 65%;
+        background-position-x: 65% !important;
         background-repeat: no-repeat;
         @include bgimggrad(
             var(--color-black-tr-1),
