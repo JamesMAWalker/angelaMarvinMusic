@@ -29,4 +29,33 @@ jQuery(document).ready(function($) {
     //fixes an issue created by a div element that contact forms plugin inserts into the HTML
     $('div.wpcf7').slice(0,1).addClass('wpcf7-form-wrapper-1');
     $('div.wpcf7').slice(1,2).addClass('wpcf7-form-wrapper-2');
+
+    // line under active nav link
+    // function onScroll(event){
+    //     var scrollPos = $(document).scrollTop() + 400;
+    //     $('.nav__item').each(function () {
+    //     var currLink = $(this);
+    //     var refElement = $(currLink.attr("href"));
+    //     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+    //         $('.nav__item').removeClass("active");
+    //         currLink.addClass("active");
+    //     }
+    //     else{
+    //         currLink.removeClass("active");
+    //     }
+    
+    //     });
+    //     $('.fade-item').each(function() {
+    //     if (refElement.position().top <= (scrollPos - 400) && refElement.position().top + refElement.height() > (scrollPos - 400)) {
+    //         $('.nav__item').removeClass("active");
+    //         currLink.addClass("active");
+    //     }
+    //     else{
+    //         currLink.removeClass("active");
+    //     }
+    //     })
+    // }
 });
+
+    
+
