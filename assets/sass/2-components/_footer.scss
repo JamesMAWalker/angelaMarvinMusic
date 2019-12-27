@@ -40,6 +40,10 @@
         @include flexCenterCol;
         justify-content: center;
 
+        @media only screen and (max-height: $bp-med) {
+            height: 90%;
+        }
+
         @media only screen and (max-width: $bp-sm) {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
@@ -65,6 +69,11 @@
             &:hover {
                 transform: scale(1.075);
                 opacity: 1;
+            }
+
+            @media only screen and (max-height: $bp-med) {
+                height: 1.75rem;
+                width: 1.75rem;
             }
         }
 

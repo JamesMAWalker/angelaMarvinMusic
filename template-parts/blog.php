@@ -48,13 +48,13 @@
                         $counter = 1; 
                         if($firstloop === true) {
                             $firstloop = false; ?>
-                            <div class="blog__item blog__item-7 text-button">View older &rarr;
+                            <div class="blog__item blog__item-7 btn__text">View older &rarr;
                             </div>
                             <?php } else { ?>
-                            <div class="blog__item blog__item-8 text-button hide">&larr; View newer
+                            <div class="blog__item blog__item-8 btn__text hide">&larr; View newer
                             </div>
                             <?php if ($homepageBlog->current_post + 1 !== $homepageBlog->post_count) { ?>
-                                <div class="blog__item blog__item-7 text-button hide">View older &rarr;
+                                <div class="blog__item blog__item-7 btn__text hide">View older &rarr;
                                 </div>
                             <?php }
                             
