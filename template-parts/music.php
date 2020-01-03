@@ -35,14 +35,13 @@
                     </div>
                 </label> 
 
-            <div class="listen__exp listen__exp-<?php echo $count; $count++?>" tabindex="1">
-                
+            <div class="listen__exp listen__exp-<?php echo $count; ?>" tabindex="1">
                 <?php
                 if (get_field('video_link')) { ?>
                     <div class="listen__exp-video-wrap">
                             <span class="listen__exp-video-cover-button"></span>
                         </span>
-                        <iframe class="listen__exp-video" src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        <iframe id="vid-<?php echo $count; ?>" class="listen__exp-video" src="<?php the_field('video_link'); ?>" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
                 <?php } else { 
@@ -66,7 +65,7 @@
                     <p class="text-1"><?php the_content(); ?></p>
                 </div>
             </div> 
-            <?php } wp_reset_postdata(); ?>
+            <?php $count++; } wp_reset_postdata(); ?>
            </div>
         </div>
 </section>
