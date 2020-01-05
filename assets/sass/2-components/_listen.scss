@@ -115,7 +115,7 @@
 
         &:checked + .listen__item + .listen__exp {
             @include flexCenterCol;
-            align-items: left;
+            align-items: center;
 
             @media only screen and (max-width: $bp-sm) {
                 display: none !important;

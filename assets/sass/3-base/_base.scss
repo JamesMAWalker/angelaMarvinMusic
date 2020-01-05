@@ -12,6 +12,7 @@ html {
 	// user-select: none;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 
 	&::selection {
 		color: var(--color-primary);
