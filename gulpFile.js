@@ -1,15 +1,36 @@
-const browserSync = require('browser-sync').create(),
-      gulp         = require('gulp'),
-      sass         = require('gulp-sass'),
-      settings     = require('./settings');
+const browserSync = require("browser-sync").create(),
+  gulp = require("gulp"),
+  prefix = require("gulp-autoprefixer"),
+  sass = require("gulp-sass"),
+  settings = require("./settings");
 
+const autoprefixer = require("gulp-autoprefixer");
+
+// gulp.task("prefix", () =>
+//   gulp
+//     .src("style.css")
+//     .pipe(
+//       autoprefixer({
+//         browsers: ["last 99 versions"],
+//         cascade: false
+//       })
+//     )
+//     .pipe(gulp.dest("./"))
+// );
 
 // Compiles SASS file in root directory with a .css suffix. Also sets up browserSync to monitor changes.      
 function style() {
 
-  return gulp.src('./assets/sass/**/*.scss')
+  return gulp
+    .src("./assets/sass/**/*.scss")
     .pipe(sass())
-    .pipe(gulp.dest('./'))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 99 versions"],
+        cascade: false
+      })
+    )
+    .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
 
 }

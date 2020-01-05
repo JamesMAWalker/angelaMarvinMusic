@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "all": "0.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "scroll-out": "^2.2.7"
   }
 }

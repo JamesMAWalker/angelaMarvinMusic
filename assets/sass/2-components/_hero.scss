@@ -11,30 +11,21 @@
     background-color: var(--color-white);
 }
 
-@supports (background-image: linear-gradient()) {
-    .hero {
-        @include bgimggrad(
+
+
+
+.hero {
+    @include flexFramer;
+    @include bgimg('assets/images/landing-photo.png');
+    
+    @supports (background-image: linear-gradient()) {
+         @include bgimggrad(
             var(--color-black-tr-1),
             var(--color-black-tr-1),
         'assets/images/landing-photo.png',
         );
     }
-}
-
-@supports not (background-image: linear-gradient()) {
-    .hero {
-        background-image: url('assets/images/landing-photo.png');
-    }
-}
-
-.hero {
-    @include flexFramer;
-    // background-image: url('assets/images/landing-photo.png');
-    @include bgimggrad(
-        var(--color-black-tr-1),
-        var(--color-black-tr-1),
-       'assets/images/landing-photo.png',
-    );
+   
 
     @media only screen and (max-width: $bp-sm) {
         background-size: cover;
