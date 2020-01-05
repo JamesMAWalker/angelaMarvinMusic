@@ -1,6 +1,6 @@
 /*
-Theme Name: Template-Theme
-Author: James Walker
+Theme Name: Angela Marvin Music
+Author: James Walker and Andrew Marvin
 Version: 1.0
 Requires at least: 4.7
 Requires PHP: 5.2.4
@@ -177,8 +177,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.2));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0));
-            filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0));
+    -webkit-filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0));
   }
 }
 
@@ -188,8 +188,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.2));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0));
-            filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0));
+    -webkit-filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0));
   }
 }
 
@@ -199,8 +199,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             filter: drop-shadow(0 0 0px rgba(255, 152, 177, 0.5));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(255, 152, 177, 0));
-            filter: drop-shadow(0 0 15px rgba(255, 152, 177, 0));
+    -webkit-filter: drop-shadow(0 0 20px rgba(255, 152, 177, 0));
+            filter: drop-shadow(0 0 20px rgba(255, 152, 177, 0));
   }
 }
 
@@ -210,23 +210,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
             filter: drop-shadow(0 0 0px rgba(255, 152, 177, 0.5));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(255, 152, 177, 0));
-            filter: drop-shadow(0 0 15px rgba(255, 152, 177, 0));
+    -webkit-filter: drop-shadow(0 0 20px rgba(255, 152, 177, 0));
+            filter: drop-shadow(0 0 20px rgba(255, 152, 177, 0));
   }
 }
 
 input:not(:checked) + .pulse:hover > span {
   -webkit-animation: shadow-pulse 1s infinite;
           animation: shadow-pulse 1s infinite;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 input:checked + .pulse:hover > span {
   -webkit-animation: shadow-pulse-alt 1s infinite;
           animation: shadow-pulse-alt 1s infinite;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .pulse > span {
