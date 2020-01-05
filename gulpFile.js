@@ -1,7 +1,7 @@
 const browserSync = require("browser-sync").create(),
   gulp = require("gulp"),
-  prefix = require("gulp-autoprefixer"),
   sass = require("gulp-sass"),
+  cleanCSS = require("gulp-clean-css"),
   settings = require("./settings");
 
 const autoprefixer = require("gulp-autoprefixer");
@@ -30,6 +30,7 @@ function style() {
         cascade: false
       })
     )
+    .pipe(cleanCSS())
     .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
 
