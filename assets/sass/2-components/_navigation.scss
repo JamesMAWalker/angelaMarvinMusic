@@ -2,6 +2,19 @@
 /*	2. Navigation Bar
 /* ------------------------------------- */
 
+
+
+@supports (justify-content: space-evenly;) {
+    .nav {
+        justify-content: space-evenly;
+    }
+}
+
+@supports not (justify-content: space-evenly;) {
+    .nav {
+        justify-content: space-around;
+    }
+}
 .nav {
     position: absolute;
     z-index: 998;

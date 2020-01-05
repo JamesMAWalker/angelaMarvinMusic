@@ -231,7 +231,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 90%;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
+=======
+@media only screen and (max-width: 43.75em) {
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -275,7 +279,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background-color: transparent;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
+=======
+@media only screen and (max-width: 43.75em) {
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about__content {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -349,7 +357,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background-repeat: no-repeat;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
+=======
+@media only screen and (max-width: 43.75em) {
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about__photo {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -403,6 +415,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: 96%;
   }
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 43.75em) {
+  .blog-frame::before {
+    content: "read |";
+    position: absolute;
+    letter-spacing: .5rem;
+    top: 3.5rem;
+    right: 12vw;
+    margin-left: auto;
+    font-size: 5rem;
+    font-weight: 200;
+    opacity: .2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: var(--color-grey-dark-3);
+  }
+}
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 
 .blog-wrapper {
   display: -webkit-box;
@@ -420,11 +453,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 75%;
   height: 75vh;
   overflow-y: scroll;
+<<<<<<< HEAD
+=======
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-grey-dark-4);
+  border-bottom: 1px solid var(--color-grey-dark-4);
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 }
 
 @media only screen and (max-width: 43.75em) {
   .blog-wrapper {
+<<<<<<< HEAD
     height: 85vh;
+=======
+    overflow-y: hidden;
+    height: 69vh;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-grey-dark-4);
+    border-bottom: 1px solid var(--color-grey-dark-4);
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   }
 }
 
@@ -473,16 +520,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .blog__title {
   position: absolute;
+<<<<<<< HEAD
   bottom: 25%;
   right: -1%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+=======
+  top: 25%;
+  right: -1%;
+  -webkit-transform: scale(1.1) rotate(90deg);
+          transform: scale(1.1) rotate(90deg);
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 }
 
 @media only screen and (max-width: 43.75em) {
   .blog__title {
+<<<<<<< HEAD
     bottom: 75%;
     right: -3%;
+=======
+    display: none;
+>>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   }
 }
 
