@@ -32,7 +32,7 @@
                 $homepageMusic->the_post(); ?>
                 <!-- button area of listen section -->
                 <input <?php if ($count === 1) {echo "checked"; } ?>  name="tracks" type="radio" id="radio<?php echo $count;?>" class="listen__button listen__button-<?php echo $count;?>">
-                <label for="radio<?php echo $count;?>" class="listen__item listen__item-<?php echo $count;?>" tabindex="1">
+                <label for="radio<?php echo $count;?>" class="pulse listen__item listen__item-<?php echo $count;?>" tabindex="1">
                     <span class="play-button--active"></span>
                     <span class="play-button"></span>
                     <div class="listen__item-wrapper">
