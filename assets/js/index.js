@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
     // Mobile menu position
     if (bpSmaller.matches) {
       $(".nav").attr("data-scroll", "disabled");
-      $('.nav').css("transform", "translateY(-90%)");
+      $('.nav').css("transform", "translateY(-88%)");
 
       $('.nav__item').on('click', () => {
           $(".nav").toggleClass("unhide--flex-height");

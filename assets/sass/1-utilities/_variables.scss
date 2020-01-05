@@ -11,9 +11,9 @@
     --test-border-3: rgb(255, 85, 33);
 
 
-    --color-primary: rgb(162, 221, 234);
-    --color-primary-tr: rgba(162, 221, 234, .35);
-    --color-primary-tr-2: rgba(162, 221, 234, .75);
+    // --color-primary: rgb(162, 221, 234); 
+    // --color-primary-tr: rgba(162, 221, 234, .35);
+    // --color-primary-tr-2: rgba(162, 221, 234, .75);
 
     --color-primary: rgb(255, 152, 177);
     --color-primary-tr: rgba(255, 152, 177, .35);
@@ -59,5 +59,6 @@
 }
 
 $font-title: 'Dawning of a New Day', cursive;
+$font-title-safe: 'Cedarville Cursive', cursive;
 $font-primary: 'Nunito', sans-serif;
 $font-builders: 'Roboto Condensed', sans-serif;

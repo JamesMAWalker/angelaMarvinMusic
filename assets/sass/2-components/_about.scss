@@ -26,7 +26,7 @@
     height: 100%;
     width: 90%;
 
-    @media only screen and (max-width: $bp-sm) {
+    @media only screen and (max-width: $bp-med-sm) {
         grid-template-columns: 100%;
         grid-template-rows: 100vh 80vh;
     }
@@ -47,7 +47,7 @@
             background-color: transparent;
         }
 
-        @media only screen and (max-width: $bp-sm) {
+        @media only screen and (max-width: $bp-med-sm) {
             grid-row: 1 / 2;
             grid-column: 1 / 2;
         }
@@ -85,7 +85,7 @@
         height: 90%;
         @include bgimgicon('assets/images/about-photo-border.png');
 
-         @media only screen and (max-width: $bp-sm) {
+         @media only screen and (max-width: $bp-med-sm) {
             grid-row: 2 / 3;
             grid-column: 1 / 2;
             align-self: flex-end;
