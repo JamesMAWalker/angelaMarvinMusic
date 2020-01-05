@@ -9,6 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Nunito:200,300,400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap);
 /* ------------------------------------- */
 /*	3. Colors/Textures
 /* ------------------------------------- */
@@ -19,9 +20,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   --test-border-2: rgb(18, 0, 182);
   --test-3: rgb(33, 255, 240);
   --test-border-3: rgb(255, 85, 33);
-  --color-primary: rgb(162, 221, 234);
-  --color-primary-tr: rgba(162, 221, 234, .35);
-  --color-primary-tr-2: rgba(162, 221, 234, .75);
   --color-primary: rgb(255, 152, 177);
   --color-primary-tr: rgba(255, 152, 177, .35);
   --color-primary-tr-2: rgba(255, 152, 177, .75);
@@ -296,11 +294,7 @@ input:checked + .pulse:hover > span {
   width: 90%;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
-=======
-@media only screen and (max-width: 43.75em) {
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -344,11 +338,7 @@ input:checked + .pulse:hover > span {
   background-color: transparent;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
-=======
-@media only screen and (max-width: 43.75em) {
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about__content {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -422,11 +412,7 @@ input:checked + .pulse:hover > span {
   background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 56.25em) {
-=======
-@media only screen and (max-width: 43.75em) {
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   .about__photo {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -480,27 +466,6 @@ input:checked + .pulse:hover > span {
     height: 96%;
   }
 }
-<<<<<<< HEAD
-=======
-
-@media only screen and (max-width: 43.75em) {
-  .blog-frame::before {
-    content: "read |";
-    position: absolute;
-    letter-spacing: .5rem;
-    top: 3.5rem;
-    right: 12vw;
-    margin-left: auto;
-    font-size: 5rem;
-    font-weight: 200;
-    opacity: .2;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    color: var(--color-grey-dark-3);
-  }
-}
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 
 .blog-wrapper {
   display: -webkit-box;
@@ -518,25 +483,11 @@ input:checked + .pulse:hover > span {
   width: 75%;
   height: 75vh;
   overflow-y: scroll;
-<<<<<<< HEAD
-=======
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-grey-dark-4);
-  border-bottom: 1px solid var(--color-grey-dark-4);
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 }
 
 @media only screen and (max-width: 43.75em) {
   .blog-wrapper {
-<<<<<<< HEAD
     height: 85vh;
-=======
-    overflow-y: hidden;
-    height: 69vh;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-grey-dark-4);
-    border-bottom: 1px solid var(--color-grey-dark-4);
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   }
 }
 
@@ -585,27 +536,16 @@ input:checked + .pulse:hover > span {
 
 .blog__title {
   position: absolute;
-<<<<<<< HEAD
   bottom: 25%;
   right: -1%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-=======
-  top: 25%;
-  right: -1%;
-  -webkit-transform: scale(1.1) rotate(90deg);
-          transform: scale(1.1) rotate(90deg);
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
 }
 
 @media only screen and (max-width: 43.75em) {
   .blog__title {
-<<<<<<< HEAD
     bottom: 75%;
     right: -3%;
-=======
-    display: none;
->>>>>>> 4315607d0559a737f1fdc9731c29a212ce0d2777
   }
 }
 
@@ -1793,6 +1733,21 @@ input:checked + .pulse:hover > span {
   background-color: var(--color-white);
 }
 
+@supports (background-image: linear-gradient()) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-black-tr-1)), to(var(--color-black-tr-1))), url("assets/images/landing-photo.png");
+    background-image: linear-gradient(to bottom, var(--color-black-tr-1), var(--color-black-tr-1)), url("assets/images/landing-photo.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@supports not (background-image: linear-gradient()) {
+  .nav {
+    background-image: url("assets/images/landing-photo.png");
+  }
+}
+
 .hero {
   width: 97%;
   height: 95%;
@@ -2803,6 +2758,21 @@ input:checked + .pulse:hover > span {
 /* ------------------------------------- */
 /*	2. Navigation Bar
 /* ------------------------------------- */
+@supports (justify-content: space-evenly) {
+  .nav {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@supports not (justify-content: space-evenly) {
+  .nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .nav {
   position: absolute;
   z-index: 998;
@@ -3132,7 +3102,7 @@ input {
 /*	3. Typography
 /* ------------------------------------- */
 .header-1 {
-  font-family: "Dawning of a New Day", cursive;
+  font-family: "Dawning of a New Day", cursive, "Cedarville Cursive", cursive;
   font-weight: 100;
   font-size: 13.5rem;
   color: var(--color-white-tr-2);

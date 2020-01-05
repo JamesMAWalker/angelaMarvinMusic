@@ -4,13 +4,13 @@
 
 
 
-@supports (justify-content: space-evenly;) {
+@supports (justify-content: space-evenly) {
     .nav {
         justify-content: space-evenly;
     }
 }
 
-@supports not (justify-content: space-evenly;) {
+@supports not (justify-content: space-evenly) {
     .nav {
         justify-content: space-around;
     }
