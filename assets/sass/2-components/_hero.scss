@@ -22,7 +22,7 @@
 }
 
 @supports not (background-image: linear-gradient()) {
-    .nav {
+    .hero {
         background-image: url('assets/images/landing-photo.png');
     }
 }

@@ -1743,7 +1743,7 @@ input:checked + .pulse:hover > span {
 }
 
 @supports not (background-image: linear-gradient()) {
-  .nav {
+  .hero {
     background-image: url("assets/images/landing-photo.png");
   }
 }
@@ -2758,21 +2758,6 @@ input:checked + .pulse:hover > span {
 /* ------------------------------------- */
 /*	2. Navigation Bar
 /* ------------------------------------- */
-@supports (justify-content: space-evenly) {
-  .nav {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
-@supports not (justify-content: space-evenly) {
-  .nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 .nav {
   position: absolute;
   z-index: 998;
@@ -2783,9 +2768,8 @@ input:checked + .pulse:hover > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
