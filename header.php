@@ -35,7 +35,7 @@ if (is_home()) {
 			<a href="/#">
 				<img class="nav__logo" src="<?php echo get_template_directory_uri()?>/assets/images/provisional-logo.svg" alt="angela marvin monogram">
 			</a>
-			<a href="<?php get_home_url()?>/about" class="nav__item " data-scroll>about</a>
+			<a href="<?php get_home_url()?>/about" class="nav__item " target="_blank" data-scroll>about</a>
 			<a href="#section-contact" class="nav__item " data-scroll>contact</a>
 		</nav>
 		<input type="checkbox" class="nav__checkbox" id="nav-toggle">

@@ -17,7 +17,7 @@
                     echo " hide"; } ?>" tabindex="2">
                         <div class="blog__item-details sub-header-2 sub-header-2">
                             <span class="blog__item-category"><?php foreach((get_the_category()) as $category) { ?>
-                                <a href="<?php echo get_category_link($category->cat_ID); ?>"><?php echo $category->category_nicename ?> </a>
+                                <a href="<?php echo get_category_link($category->cat_ID); ?>" target="_blank"><?php echo $category->category_nicename ?> </a>
                                 <?php } ?> | </span>
                             <span class="blog__item-date"><?php echo get_the_date('m.d.y'); ?></span>
                         </div>
@@ -33,7 +33,7 @@
                             }
                             ?>
                         </div>
-                        <a href="<?php the_permalink(); ?>" class="blog__item-link">
+                        <a href="<?php the_permalink(); ?>" target="_blank" class="blog__item-link">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/Read More - Button.svg" alt="" class="read-more-button">
                         </a>
                     </div>
