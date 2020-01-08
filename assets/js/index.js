@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
         }
     })
 
-    // Mobile menu position
+    // Mobile nav menu positioner
     if (bpSmaller.matches) {
       $(".nav").attr("data-scroll", "disabled");
       $('.nav').css("transform", "translateY(-88%)");
@@ -74,7 +74,7 @@ function pauseOtherMedia(mediaNum) {
     for (let i = 1; i < 5; i ++ ) {
         if (i !== mediaNum) {
             if (typeof(players[i-1]) === 'object') {
-                players[i-1].pauseVideo();
+                players[i-1].pauseVideo();     
             } else {  
                 jQuery('.listen__exp-' + i).find('audio')[0].pause();
             }
@@ -137,9 +137,21 @@ function createMedia(num) {
     }
 }
 
+
+// function togglePauseButton() {
+//     // players.forEach( player => console.log(player))
+//     setTimeout( () => {
+//         console.log(players[0].getPlayerState())
+//     }, 3000);
+// };
+
+
+
 function onYouTubeIframeAPIReady() {
     createMedia(1);
     createMedia(2);
     createMedia(3);
     createMedia(4);
+
+    // togglePauseButton();
 }
