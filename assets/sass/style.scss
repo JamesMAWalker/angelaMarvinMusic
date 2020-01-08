@@ -18,6 +18,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 // 1 - Utilities
 @import "1-utilities/variables";
+@import "1-utilities/animations";
 @import "1-utilities/media-queries";
 @import "1-utilities/mixins";
 @import "1-utilities/utilities";
@@ -37,3 +38,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 // 3 - Base
 @import "3-base/base";
 @import "3-base/typography";
+
+// 4 - Vendors
+@import "4-Vendors/custom-form-7";

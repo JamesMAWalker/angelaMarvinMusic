@@ -1,0 +1,41 @@
+/* ------------------------------------- */
+/*	1. Animations
+/* ------------------------------------- */
+
+// Keyframe Animations
+
+@keyframes shadow-pulse
+{
+     0% {
+            filter: drop-shadow( 0 0 0px rgba(0, 0, 0, 0.2));
+     }
+     100% {
+            filter: drop-shadow( 0 0 15px rgba(0, 0, 0, 0));
+     }
+}
+@keyframes shadow-pulse-alt
+{
+     0% {
+            filter: drop-shadow( 0 0 0px rgba(255, 152, 177, 0.5));
+     }
+     100% {
+            filter: drop-shadow( 0 0 15px rgba(255, 152, 177, 0));
+     }
+}
+
+
+// Implemented Animations
+
+input:not(:checked) + .pulse:hover > span {
+    animation: shadow-pulse 1s infinite;
+    transform: translateY(-1px);
+}
+
+input:checked + .pulse:hover > span {
+    animation: shadow-pulse-alt 1s infinite;
+    transform: translateY(-1px);
+}
+
+.pulse > span {
+    transition: transform .25s ease-out;
+}

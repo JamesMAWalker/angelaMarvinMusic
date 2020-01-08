@@ -6,18 +6,6 @@ const browserSync = require("browser-sync").create(),
 
 const autoprefixer = require("gulp-autoprefixer");
 
-// gulp.task("prefix", () =>
-//   gulp
-//     .src("style.css")
-//     .pipe(
-//       autoprefixer({
-//         browsers: ["last 99 versions"],
-//         cascade: false
-//       })
-//     )
-//     .pipe(gulp.dest("./"))
-// );
-
 // Compiles SASS file in root directory with a .css suffix. Also sets up browserSync to monitor changes.      
 function style() {
 
