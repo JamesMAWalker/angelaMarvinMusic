@@ -35,7 +35,3 @@ input:checked + .pulse:hover > span {
     animation: shadow-pulse-alt 1s infinite;
     transform: translateY(-1px);
 }
-
-.pulse > span {
-    transition: transform .25s ease-out;
-}

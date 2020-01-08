@@ -83,26 +83,23 @@ function pauseOtherMedia(mediaNum) {
 }
 
 function playPauseBtns() {
-    setTimeout( function (){
-        for (let i = 0; i < 4; i++) {
-            if (typeof(players[i]) === 'object') {
-                if (players[i].getPlayerState() === 1) {
-                    console.log('player ' +i + ' is playing'); 
-                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(.75)');
-                } else {
-                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(1.5)');
-                    console.log('player ' +i + ' is paused'); 
-                }
+    for (let i = 0; i < 4; i++) {
+        if (typeof(players[i]) === 'object') {
+            // video
+            if (players[i].getPlayerState() === 1) {
+                jQuery('.listen__item-' + (i+1)).find('.play-button--active')[0].style.backgroundImage = "url('" + dirs.styleDir + "/assets/images/pause-button-pink.svg')";
             } else {
-                if (!jQuery('.listen__exp-' + (i+1)).find('audio')[0].paused) {
-                    console.log('audio ' +i + ' is playing'); 
-                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(.75)');
-                } else {
-                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(1.5)');
-                    console.log('dudio ' +i + ' is paused'); 
-                }
+                jQuery('.listen__item-' + (i+1)).find('.play-button--active')[0].style.backgroundImage = "url('" + dirs.styleDir + "/assets/images/play-button-pink.svg')";
             }
-    }}, 500)
+        } else {
+            // audio
+            if (!jQuery('.listen__exp-' + (i+1)).find('audio')[0].paused) {
+                jQuery('.listen__item-' + (i+1)).find('.play-button--active')[0].style.backgroundImage = "url('" + dirs.styleDir + "/assets/images/pause-button-pink.svg'";
+            } else {
+                jQuery('.listen__item-' + (i+1)).find('.play-button--active')[0].style.backgroundImage = "url('" + dirs.styleDir + "/assets/images/play-button-pink.svg')";
+            }
+        }
+    }
 }
 
 function createMedia(num) {
@@ -137,21 +134,9 @@ function createMedia(num) {
     }
 }
 
-
-// function togglePauseButton() {
-//     // players.forEach( player => console.log(player))
-//     setTimeout( () => {
-//         console.log(players[0].getPlayerState())
-//     }, 3000);
-// };
-
-
-
 function onYouTubeIframeAPIReady() {
     createMedia(1);
     createMedia(2);
     createMedia(3);
     createMedia(4);
-
-    // togglePauseButton();
 }

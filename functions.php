@@ -9,11 +9,6 @@ function angelamusic_files() {
 
 add_action('wp_enqueue_scripts', 'angelamusic_files');
 
-// Remove 32px margin
-// function my_function_admin_bar() { return false; }
-
-// add_filter( 'show_admin_bar' , 'my_function_admin_bar');
-
 function eq_add_favicon(){ ?>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri();?>/assets/images/favicon.png"/>
     <?php 
@@ -27,4 +22,13 @@ function site_features() {
 }
 
 add_action('after_setup_theme', 'site_features');
+
+// passing theme directory to the frontend for use in listening section JS
+wp_register_script( 'passDirs', 'path/to/myscript.js' );
+wp_localize_script( 'passDirs', 'dirs', array(
+    'styleDir' => get_stylesheet_directory_uri()
+    )
+);
+wp_enqueue_script( 'passDirs' );
+
 ?>
