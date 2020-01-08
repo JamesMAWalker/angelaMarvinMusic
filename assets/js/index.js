@@ -82,10 +82,36 @@ function pauseOtherMedia(mediaNum) {
     }
 }
 
+function playPauseBtns() {
+    setTimeout( function (){
+        for (let i = 0; i < 4; i++) {
+            if (typeof(players[i]) === 'object') {
+                if (players[i].getPlayerState() === 1) {
+                    console.log('player ' +i + ' is playing'); 
+                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(.75)');
+                } else {
+                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(1.5)');
+                    console.log('player ' +i + ' is paused'); 
+                }
+            } else {
+                if (!jQuery('.listen__exp-' + (i+1)).find('audio')[0].paused) {
+                    console.log('audio ' +i + ' is playing'); 
+                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(.75)');
+                } else {
+                    jQuery('.listen__item-' + (i+1)).find('.play-button--active').css('background-image', 'scale(1.5)');
+                    console.log('dudio ' +i + ' is paused'); 
+                }
+            }
+    }}, 500)
+}
+
 function createMedia(num) {
     if (urls[num-1] !== null) {
         players[num-1] = new YT.Player('player' + num, {
             videoId: urls[num-1],
+            events: {
+                'onStateChange': playPauseBtns
+              }
         });
         jQuery('.listen__item-'+num).click(function(){
             pauseOtherMedia(num);
@@ -103,6 +129,10 @@ function createMedia(num) {
             } else {
                 jQuery('.listen__exp-' + num).find('audio')[0].play();
             } 
+            playPauseBtns();
+        });
+        jQuery('audio').on('play pause', function () {
+            playPauseBtns();
         });
     }
 }
